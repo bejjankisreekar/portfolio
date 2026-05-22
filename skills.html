@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sreekar Bejjanki - Skills</title>
+  <meta name="description" content="Technical skills, LeetCode, HackerRank, and certifications — Sreekar Bejjanki.">
+  <title>Skills & Certifications | Sreekar Bejjanki</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4C/Zl7bN/zJ+JbJ/D0bK/F7FqU3A/F/vE5H+v2N5z+J9u/N/rN8z/A/xJ2s/R6yP6w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="main-nav">
-    <div class="container"> <a href="index.html" class="logo">Sreekar Bejjanki</a> <ul>
+  <nav class="main-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="logo"><span>SB</span> Sreekar Bejjanki</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -19,96 +27,114 @@
       </ul>
     </div>
   </nav>
+
   <main class="main-content">
+    <div class="page-hero">
+      <h1>Skills & Achievements</h1>
+      <p>Technical stack, coding platforms, and verified certifications—all clickable.</p>
+    </div>
+
     <section class="section">
-      <h2 class="section-title">My Technical Skills</h2>
+      <h2 class="section-title">Coding Platforms</h2>
+      <p class="section-subtitle">Click to view profiles and problem-solving activity</p>
+      <div class="container platform-grid">
+        <a href="https://leetcode.com/u/bejjankisreekar/" class="platform-card leetcode" target="_blank" rel="noopener noreferrer">
+          <div class="card-icon"><i class="fas fa-code"></i></div>
+          <h3>LeetCode</h3>
+          <p>100+ problems solved — algorithms, data structures, and interview prep.</p>
+          <span class="card-cta">View Profile <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="https://www.hackerrank.com/bejjankisreekar" class="platform-card hackerrank" target="_blank" rel="noopener noreferrer">
+          <div class="card-icon"><i class="fab fa-hackerrank"></i></div>
+          <h3>HackerRank</h3>
+          <p>Problem solving, SQL, and language proficiency challenges.</p>
+          <span class="card-cta">View Profile <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="https://github.com/bejjankisreekar" class="platform-card github" target="_blank" rel="noopener noreferrer">
+          <div class="card-icon"><i class="fab fa-github"></i></div>
+          <h3>GitHub</h3>
+          <p>Open-source projects including HRMS, ClientConnect, and more.</p>
+          <span class="card-cta">View Repositories <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Technical Skills</h2>
       <div class="container skills-grid">
         <div class="skill-category">
-          <h3><i class="fas fa-code"></i> Programming Languages</h3>
+          <h3><i class="fas fa-code"></i> Programming</h3>
           <ul>
-            <li>Python</li>
-            <li>SQL (T-SQL, PostgreSQL)</li>
-            <li>Scala (Basic)</li>
+            <li>Python</li><li>SQL (T-SQL, PostgreSQL)</li><li>Scala (Basic)</li>
           </ul>
         </div>
         <div class="skill-category">
-          <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3>
+          <h3><i class="fas fa-cloud"></i> Cloud (Azure)</h3>
           <ul>
-            <li>Azure Data Factory </li>
-            <li>Synapse Analytics</li>
-            <li>Databricks</li>
-            <li>Blob Storage</li>
-            <li>ADLS Gen2</li>
-            <li>Azure Functions</li>
-            <li>Cosmos DB</li>
+            <li>Data Factory</li><li>Synapse</li><li>Databricks</li><li>Blob / ADLS</li><li>Functions</li><li>Cosmos DB</li>
           </ul>
         </div>
         <div class="skill-category">
-          <h3><i class="fas fa-database"></i> Databases & Data Warehousing</h3>
+          <h3><i class="fas fa-database"></i> Databases</h3>
           <ul>
-            <li>SQL Server</li>
-            <li>PostgreSQL</li>
-            <li>Cosmos DB</li>
-            <li>Snowflake (Basic)</li>
-            <li>Data Modeling (Kimball, Inmon)</li>
+            <li>SQL Server</li><li>PostgreSQL</li><li>Cosmos DB</li><li>Snowflake</li><li>Data Modeling</li>
           </ul>
         </div>
         <div class="skill-category">
           <h3><i class="fas fa-cogs"></i> ETL & Orchestration</h3>
           <ul>
-            <li>Azure Data Factory</li>
-            <li>Apache Spark</li>
-            <li>Apache Kafka (Basic)</li>
-            <li>Apache Airflow (Basic)</li>
+            <li>Azure Data Factory</li><li>Apache Spark</li><li>Kafka</li><li>Airflow</li>
           </ul>
         </div>
         <div class="skill-category">
-          <h3><i class="fas fa-tachometer-alt"></i> Big Data & Analytics</h3>
+          <h3><i class="fas fa-chart-line"></i> Big Data</h3>
           <ul>
-            <li>Azure Databricks</li>
-            <li>Delta Lake</li>
-            <li>Azure Synapse Analytics</li>
-            <li>Spark SQL</li>
-            <li>Power BI (Basic)</li>
+            <li>Databricks</li><li>Delta Lake</li><li>Synapse</li><li>Spark SQL</li><li>Power BI</li>
           </ul>
         </div>
         <div class="skill-category">
-          <h3><i class="fas fa-laptop-code"></i> DevOps & Version Control</h3>
+          <h3><i class="fas fa-code-branch"></i> DevOps</h3>
           <ul>
-            <li>Git / GitHub</li>
-            <li>Azure DevOps</li>
-            <li>CI/CD Practices</li>
+            <li>Git / GitHub</li><li>Azure DevOps</li><li>CI/CD</li>
           </ul>
         </div>
       </div>
     </section>
-    <section class="section">
-      <h2 class="section-title">Achievements & Certifications</h2>
-      <div class="container achievements-certifications-grid">
-        <div class="category-card">
-          <h3><i class="fas fa-trophy"></i> Achievements</h3>
-          <ul>
-            <li>Solved 100+ LeetCode problems</li>
-          </ul>
-        </div>
-        <div class="category-card">
-          <h3><i class="fas fa-certificate"></i> Certifications</h3>
-          <ul>
-            <li>Learning Python (2020) - by Linkedin Learnings on January, 2021</li>
-            <li>Introduction to Generative AI - by Google cloud on July, 2023</li>
-            <li>Learning Django - by Linkedin Learnings on February, 2021</li>
 
-          </ul>
-        </div>
+    <section class="section">
+      <h2 class="section-title">Certifications</h2>
+      <p class="section-subtitle">Click any certificate to view details or verification</p>
+      <div class="container cert-grid">
+        <a href="https://www.linkedin.com/in/sreekarbejjanki/details/certifications/" class="cert-card" target="_blank" rel="noopener noreferrer">
+          <span class="cert-meta">LinkedIn Learning · Jan 2021</span>
+          <h3>Learning Python</h3>
+          <p>Foundational Python programming for data and automation workflows.</p>
+          <span class="card-cta">View on LinkedIn <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="https://www.cloudskillsboost.google/course_templates/536" class="cert-card" target="_blank" rel="noopener noreferrer">
+          <span class="cert-meta">Google Cloud · Jul 2023</span>
+          <h3>Introduction to Generative AI</h3>
+          <p>Core concepts of generative AI, LLMs, and responsible AI practices.</p>
+          <span class="card-cta">View Course <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="https://www.linkedin.com/in/sreekarbejjanki/details/certifications/" class="cert-card" target="_blank" rel="noopener noreferrer">
+          <span class="cert-meta">LinkedIn Learning · Feb 2021</span>
+          <h3>Learning Django</h3>
+          <p>Web application development with Django framework fundamentals.</p>
+          <span class="card-cta">View on LinkedIn <i class="fas fa-arrow-right"></i></span>
+        </a>
       </div>
     </section>
   </main>
+
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Sreekar Bejjanki. All rights reserved.</p>
+      <p>&copy; <span id="year">2026</span> Sreekar Bejjanki. All rights reserved.</p>
       <div class="footer-social-links">
-        <a href="https://github.com/your-github" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/your-linkedin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/bejjankisreekar" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sreekarbejjanki/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://leetcode.com/u/bejjankisreekar/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+        <a href="https://www.hackerrank.com/bejjankisreekar" target="_blank" rel="noopener noreferrer" aria-label="HackerRank"><i class="fab fa-hackerrank"></i></a>
       </div>
     </div>
   </footer>

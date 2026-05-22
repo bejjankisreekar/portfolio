@@ -3,15 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sreekar Bejjanki - Data Engineer Portfolio</title>
+  <meta name="description" content="Sreekar Bejjanki — Data Engineer building scalable pipelines on Azure, Databricks, and PySpark.">
+  <meta name="author" content="Sreekar Bejjanki">
+  <title>Sreekar Bejjanki | Data Engineer</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4C/Zl7bN/zJ+JbJ/D0bK/F7FqU3A/F/vE5H+v2N5z+J9u/N/rN8z/A/xJ2s/R6yP6w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-   <nav class="main-nav">
+  <nav class="main-nav" aria-label="Main navigation">
     <div class="container">
-      <a href="index.html" class="logo">Sreekar Bejjanki</a> <ul>
+      <a href="index.html" class="logo"><span>SB</span> Sreekar Bejjanki</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -20,52 +28,84 @@
       </ul>
     </div>
   </nav>
-  <main class="main-content">
-    <header class="header">
-      <div class="container header-content">
-        <div class="profile-picture">
-          <img src="assets/sreekar_profile.jpg" alt="Sreekar Bejjanki"> </div>
-        <div class="hero-text">
-          <h1>Sreekar Bejjanki</h1>
-          <p class="tagline">Data Engineer | Building Scalable & Intelligent Data Solutions</p>
-          <p class="intro-description">
-           A results-driven Data Engineer with 2+ years of experience in architecting and implementing robust, scalable data pipelines and ETL workflows. Proficient in PySpark, Apache Spark, and Databricks on cloud platforms like Azure, I specialize in transforming complex, raw data into actionable insights and real-time applications, underpinned by a strong foundation in SQL, Python, and a commitment to data quality and secure processing.
-          </p>
-          <div class="social-links">
-            <a href="https://github.com/your-github" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a> <a href="https://linkedin.com/in/sreekarbejjanki" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="mailto:sreekarbejjanki@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-          <a href="assets/sreekar_bejjanki.pdf" class="btn primary-btn" download>Download Resume</a> </div>
-      </div>
-    </header>
 
-    <section id="about" class="section">
+  <header class="header">
+    <div class="container header-content">
+      <div class="profile-picture">
+        <img src="assets/sreekar_profile.jpg" alt="Sreekar Bejjanki" width="220" height="220">
+      </div>
+      <div class="hero-text">
+        <h1>Sreekar Bejjanki</h1>
+        <p class="tagline">Data Engineer · Azure · Databricks · PySpark</p>
+        <p class="intro-description">
+          Results-driven Data Engineer with 2+ years of experience architecting scalable data pipelines and ETL workflows. I transform complex raw data into actionable insights using PySpark, Databricks, and Azure—with a strong foundation in SQL, Python, and data quality.
+        </p>
+        <div class="hero-actions">
+          <a href="assets/sreekar_bejjanki.pdf" class="btn primary-btn" download>
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+          <a href="contact.html" class="btn secondary-btn">Get in Touch</a>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/bejjankisreekar" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sreekarbejjanki/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://leetcode.com/u/bejjankisreekar/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+          <a href="https://www.hackerrank.com/bejjankisreekar" target="_blank" rel="noopener noreferrer" aria-label="HackerRank"><i class="fab fa-hackerrank"></i></a>
+          <a href="mailto:sreekarbejjanki@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section id="about" class="section visible">
       <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">Building data refineries from raw information to business intelligence</p>
       <div class="container about-content">
         <p>
-          As a Data Engineer, I thrive on tackling complex data challenges and architecting solutions that drive business value. My journey in the data world has equipped me with a strong foundation in data modeling, ETL processes, and big data technologies. I am always eager to learn new tools and techniques to build more efficient and scalable data platforms.
+          As a Data Engineer, I thrive on complex data challenges and architecting solutions that drive business value. My experience spans data modeling, ETL processes, and big data technologies—with a continuous focus on learning and improvement.
         </p>
         <p>
-          Currently, I am focused on leveraging cloud services like <strong>Azure</strong> and distributed processing frameworks such as <strong>Databricks</strong> to build high-performance data systems. I'm adept at programming in <strong>Python</strong> for data manipulation and automation, and proficient in <strong>SQL Server</strong> for robust database management.
+          I leverage <strong>Azure</strong> and <strong>Databricks</strong> to build high-performance data systems, program in <strong>Python</strong> for automation and transformation, and manage robust databases with <strong>SQL Server</strong>.
         </p>
         <p>
-            I believe in clean code, efficient processes, and continuous learning. My goal is to bridge the gap between raw data and business intelligence, enabling data-driven decision-making.
-        </p>
-        <p>
-          Data is a new <strong>oil.</strong> I Want to create a <strong>refineries.</strong>
+          Data is the new oil—I aim to build the <strong>refineries</strong> that turn it into fuel for decision-making.
         </p>
       </div>
+
+      <div class="container quick-links">
+        <a href="projects.html" class="quick-link-card">
+          <i class="fas fa-folder-open"></i>
+          <h4>Projects</h4>
+          <span>Healthcare & FHIR pipelines</span>
+        </a>
+        <a href="work.html" class="quick-link-card">
+          <i class="fas fa-briefcase"></i>
+          <h4>Experience</h4>
+          <span>2+ years in data engineering</span>
+        </a>
+        <a href="skills.html" class="quick-link-card">
+          <i class="fas fa-award"></i>
+          <h4>Skills & Certs</h4>
+          <span>LeetCode, HackerRank & more</span>
+        </a>
+        <a href="https://github.com/bejjankisreekar" class="quick-link-card" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+          <h4>GitHub</h4>
+          <span>Open-source repositories</span>
+        </a>
+      </div>
     </section>
-
-
-
   </main>
+
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Sreekar Bejjanki. All rights reserved.</p>
+      <p>&copy; <span id="year">2026</span> Sreekar Bejjanki. All rights reserved.</p>
       <div class="footer-social-links">
-        <a href="https://github.com/your-github" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/sreekarbejjanki" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/bejjankisreekar" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sreekarbejjanki/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://leetcode.com/u/bejjankisreekar/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+        <a href="mailto:sreekarbejjanki@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </footer>

@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sreekar Bejjanki - Projects</title>
+  <meta name="description" content="Data engineering projects by Sreekar Bejjanki — healthcare pipelines, FHIR integration, and more.">
+  <title>Projects | Sreekar Bejjanki</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4C/Zl7bN/zJ+JbJ/D0bK/F7FqU3A/F/vE5H+v2N5z+J9u/N/rN8z/A/xJ2s/R6yP6w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="main-nav">
-    <div class="container"> <a href="index.html" class="logo">Sreekar Bejjanki</a> <ul>
+  <nav class="main-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="logo"><span>SB</span> Sreekar Bejjanki</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -19,56 +27,116 @@
       </ul>
     </div>
   </nav>
+
   <main class="main-content">
+    <div class="page-hero">
+      <h1>Projects</h1>
+      <p>Production data systems and open-source work—click any card to explore further.</p>
+    </div>
+
     <section class="section">
-      <h2 class="section-title">My Projects</h2>
       <div class="container project-grid">
-        <div class="project-card">
-          <h3>Patient Messaging Automation Platform | Data Engineer</h3>
+        <article class="project-card">
+          <h3>Patient Messaging Automation Platform</h3>
           <ul>
-            <li>Developed 5+ Databricks notebooks to automate SMS messaging workflows for healthcare use cases.</li>
-            <li>Utilized PySpark to ingest and transform patient data for message eligibility and scheduling.</li>
-            <li>Integrated Twilio API to send real-time SMS notifications and capture delivery status.</li>
-            <li>Secured credential access using Azure Key Vault and Unity Catalog-based secrets management.</li>
-            <li>Executed SQL Server stored procedures to retrieve dynamic configurations and log message activity.</li>
+            <li>Developed 5+ Databricks notebooks to automate SMS workflows for healthcare.</li>
+            <li>Used PySpark to ingest and transform patient data for eligibility and scheduling.</li>
+            <li>Integrated Twilio API for real-time notifications and delivery tracking.</li>
+            <li>Secured credentials via Azure Key Vault and Unity Catalog.</li>
+            <li>Executed SQL Server stored procedures for configuration and logging.</li>
           </ul>
           <div class="project-tech">
-            <span>Python</span>
-            <span>Databricks</span>
-            <span>Twilio</span>
-            <span>Key Vault</span>
-            <span>SQL Server</span>
+            <span>Python</span><span>Databricks</span><span>Twilio</span><span>Key Vault</span><span>SQL Server</span>
           </div>
+          <div class="project-links">
+            <a href="https://github.com/bejjankisreekar/ClientConnect" class="btn secondary-btn" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> View Related Repo
+            </a>
+            <a href="contact.html" class="btn primary-btn">
+              <i class="fas fa-envelope"></i> Discuss Project
+            </a>
+          </div>
+        </article>
 
-        </div>
-
-        <div class="project-card">
-          <h3>FHIR Data Lake Integration – Unified Patient 360 Pipeline | Data Engineer</h3>
+        <article class="project-card">
+          <h3>FHIR Data Lake — Unified Patient 360 Pipeline</h3>
           <ul>
             <li>Built Databricks pipelines to ingest and flatten FHIR resources (Patient, Vitals, Appointments).</li>
-            <li>Parsed HL7 FHIR JSON into structured PySpark DataFrames using custom extractors.</li>
-            <li>Consolidated data into Delta tables with Unity Catalog for secure access and governance.</li>
-            <li>Applied CDC logic using Delta MERGE with deduplication on MRN and Encounter ID.</li>
+            <li>Parsed HL7 FHIR JSON into structured PySpark DataFrames.</li>
+            <li>Consolidated data into Delta tables with Unity Catalog governance.</li>
+            <li>Applied CDC with Delta MERGE and deduplication on MRN and Encounter ID.</li>
             <li>Processed 1M+ records with optimized batch loads and schema validation.</li>
-            <li>Scheduled workflows as production Databricks jobs for continuous and reliable execution.</li>
           </ul>
           <div class="project-tech">
-            <span>Databricks</span>
-            <span>PySpark</span>
-            <span>FHIR</span>
-            <span>Delta Lake</span>
-            <span>Unity Catalog</span>
-            <span>Azure Data Lake</span> </div>
+            <span>Databricks</span><span>PySpark</span><span>FHIR</span><span>Delta Lake</span><span>Unity Catalog</span><span>ADLS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/bejjankisreekar" class="btn secondary-btn" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> GitHub Profile
+            </a>
+            <a href="work.html" class="btn primary-btn">
+              <i class="fas fa-briefcase"></i> Work Experience
+            </a>
+          </div>
+        </article>
 
-        </div>
+        <article class="project-card">
+          <h3>HRMS — Human Resource Management System</h3>
+          <ul>
+            <li>Full-stack HR management application for employee records and workflows.</li>
+            <li>Demonstrates end-to-end development beyond data engineering.</li>
+          </ul>
+          <div class="project-tech">
+            <span>Full Stack</span><span>Database</span><span>Web App</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/bejjankisreekar/HRMS" class="btn primary-btn" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>Crypto Wallet</h3>
+          <ul>
+            <li>Blockchain wallet application exploring distributed systems concepts.</li>
+          </ul>
+          <div class="project-tech">
+            <span>Blockchain</span><span>Application</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/bejjankisreekar/crypto_wallet" class="btn primary-btn" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>Forex Algorithmic Trading</h3>
+          <ul>
+            <li>Algorithmic trading exploration with data-driven strategy components.</li>
+          </ul>
+          <div class="project-tech">
+            <span>Python</span><span>Algorithms</span><span>Finance</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/bejjankisreekar/Forex_algo_trading" class="btn primary-btn" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </article>
       </div>
-    </main>
+    </section>
+  </main>
+
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Sreekar Bejjanki. All rights reserved.</p>
+      <p>&copy; <span id="year">2026</span> Sreekar Bejjanki. All rights reserved.</p>
       <div class="footer-social-links">
-        <a href="https://github.com/your-github" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/your-linkedin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/bejjankisreekar" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sreekarbejjanki/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://leetcode.com/u/bejjankisreekar/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+        <a href="mailto:sreekarbejjanki@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </footer>

@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sreekar Bejjanki - Work Experience</title>
+  <meta name="description" content="Work experience of Sreekar Bejjanki — Data Engineer and Research Analyst.">
+  <title>Work Experience | Sreekar Bejjanki</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4C/Zl7bN/zJ+JbJ/D0bK/F7FqU3A/F/vE5H+v2N5z+J9u/N/rN8z/A/xJ2s/R6yP6w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="main-nav">
-    <div class="container"> <a href="index.html" class="logo">Sreekar Bejjanki</a> <ul>
+  <nav class="main-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="logo"><span>SB</span> Sreekar Bejjanki</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -19,42 +27,51 @@
       </ul>
     </div>
   </nav>
+
   <main class="main-content">
+    <div class="page-hero">
+      <h1>Work Experience</h1>
+      <p>Professional roles building data systems and financial analytics.</p>
+    </div>
+
     <section class="section">
-      <h2 class="section-title">Work Experience</h2>
       <div class="container">
-        <div class="experience-item">
+        <article class="experience-item">
           <h3>Data Engineer</h3>
-          <p class="role">Datalysys Software Solutions Pvt Ltd., Hyderabad</p>
-          <span class="duration">June 2022 - Present</span>
+          <p class="role">Datalysys Software Solutions Pvt Ltd. · Hyderabad</p>
+          <span class="duration">June 2022 — Present</span>
           <ul>
-            <li>Developed 5+ Databricks notebooks to automate SMS messaging workflows for healthcare use cases.</li>
-            <li>Utilized PySpark to ingest and transform patient data for message eligibility and scheduling.</li>
-            <li>Integrated Twilio API to send real-time SMS notifications and capture delivery status.</li>
-            <li>Secured credential access using Azure Key Vault and Unity Catalog-based secrets management.</li>
-            <li>Executed SQL Server stored procedures to retrieve dynamic configurations and log message activity.</li>
+            <li>Developed 5+ Databricks notebooks to automate SMS messaging workflows for healthcare.</li>
+            <li>Used PySpark to ingest and transform patient data for eligibility and scheduling.</li>
+            <li>Integrated Twilio API for real-time notifications and delivery tracking.</li>
+            <li>Secured credentials via Azure Key Vault and Unity Catalog.</li>
+            <li>Executed SQL Server stored procedures for configuration and logging.</li>
           </ul>
-        </div>
+          <div class="project-links" style="margin-top: 20px;">
+            <a href="projects.html" class="btn primary-btn"><i class="fas fa-folder-open"></i> View Related Projects</a>
+          </div>
+        </article>
 
-
-        <div class="experience-item">
+        <article class="experience-item">
           <h3>Research Analyst</h3>
-          <p class="role">Factset Systems, Hyderabad</p>
-          <span class="duration">November 2019 - May 2022</span>
+          <p class="role">FactSet Systems · Hyderabad</p>
+          <span class="duration">November 2019 — May 2022</span>
           <ul>
             <li>Gathered, interpreted, and analyzed financial data from corporate reports and market sources.</li>
-            <li>Identified trends and generated insights that led to an 85% improvement in investment prediction accuracy.</li>
+            <li>Identified trends and insights that improved investment prediction accuracy by 85%.</li>
           </ul>
-        </div>
+        </article>
       </div>
     </section>
   </main>
+
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Sreekar Bejjanki. All rights reserved.</p>
+      <p>&copy; <span id="year">2026</span> Sreekar Bejjanki. All rights reserved.</p>
       <div class="footer-social-links">
-        <a href="https://github.com/your-github" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/your-linkedin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/bejjankisreekar" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sreekarbejjanki/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:sreekarbejjanki@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </footer>
