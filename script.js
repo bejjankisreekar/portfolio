@@ -28,7 +28,7 @@ async function countFromPage(path, selector) {
 async function resolvePortfolioCounts() {
   const [projects, certifications] = await Promise.all([
     countFromPage('projects.html', '[data-project-card], .project-card'),
-    countFromPage('skills.html', '.cert-card'),
+    countFromPage('certifications.html', '[data-cert-item]'),
   ]);
 
   return {
@@ -492,7 +492,7 @@ function buildHackerRankStatRows(stats) {
 
 /** Google Drive file IDs — paste ID from Share link (same format as drive.google.com/file/d/ID/view) */
 const CERT_DRIVE_IDS = {
-  python: 'YOUR_PYTHON_FILE_ID',
+  python: '10JZ-4SVTCSGfES_kh8Pp7Sjhiv8Pe8Z2',
   django: 'YOUR_DJANGO_FILE_ID',
 };
 
@@ -504,6 +504,112 @@ function extractGoogleDriveFileId(value) {
   if (!value || value.includes('YOUR_')) return null;
   const match = String(value).match(/\/d\/([a-zA-Z0-9_-]+)/);
   return match ? match[1] : value.trim();
+}
+
+function parseWorkYearMonth(value) {
+  if (!value) return null;
+  const [year, month] = value.split('-').map(Number);
+  if (!year || !month) return null;
+  return new Date(year, month - 1, 1);
+}
+
+function experienceFromStartDates(startValues) {
+  const starts = (startValues || [])
+    .map(parseWorkYearMonth)
+    .filter(Boolean);
+  if (!starts.length) return null;
+
+  const earliestStart = starts.reduce((min, d) => (d < min ? d : min), starts[0]);
+  const today = new Date();
+
+  let months =
+    (today.getFullYear() - earliestStart.getFullYear()) * 12 +
+    (today.getMonth() - earliestStart.getMonth());
+
+  if (today.getDate() < earliestStart.getDate()) months -= 1;
+  if (months < 0) months = 0;
+
+  const years = Math.floor(months / 12);
+  const remainder = months % 12;
+
+  if (years < 1) return { label: `${months}+`, months, years: 0 };
+  if (remainder >= 6) return { label: `${years + 1}+`, months, years: years + 1 };
+  return { label: `${years}+`, months, years };
+}
+
+function calculateTotalWorkExperienceYears(root = document) {
+  const starts = [...root.querySelectorAll('[data-work-start]')].map(
+    (el) => el.dataset.workStart
+  );
+  return experienceFromStartDates(starts);
+}
+
+function calculateDataRoleExperienceYears(root = document) {
+  const starts = [...root.querySelectorAll('[data-work-current][data-work-start]')].map(
+    (el) => el.dataset.workStart
+  );
+  return experienceFromStartDates(starts);
+}
+
+async function resolveWorkExperience() {
+  const onPageRoles = document.querySelectorAll('[data-work-start]');
+  if (onPageRoles.length) {
+    return {
+      total: calculateTotalWorkExperienceYears(document),
+      data: calculateDataRoleExperienceYears(document),
+    };
+  }
+
+  try {
+    const response = await fetch('work.html');
+    if (!response.ok) throw new Error('fetch failed');
+    const doc = new DOMParser().parseFromString(await response.text(), 'text/html');
+    return {
+      total: calculateTotalWorkExperienceYears(doc),
+      data: calculateDataRoleExperienceYears(doc),
+    };
+  } catch {
+    return null;
+  }
+}
+
+function applyExperienceDisplays(experience) {
+  if (!experience) return;
+
+  if (experience.total) {
+    const { label } = experience.total;
+    document.querySelectorAll('[data-experience-stat="total"]').forEach((el) => {
+      el.textContent = label;
+    });
+    document.querySelectorAll('[data-portfolio-stat="experience-panel"]').forEach((el) => {
+      el.textContent = `${label} years`;
+    });
+  }
+
+  if (experience.data) {
+    document.querySelectorAll('[data-experience-stat="data"]').forEach((el) => {
+      el.textContent = experience.data.label;
+    });
+  }
+}
+
+async function initExperienceStats() {
+  const needsExperience = document.querySelector(
+    '[data-experience-stat], [data-portfolio-stat="experience-panel"]'
+  );
+  const orgsEl = document.querySelector('[data-work-hero-stat="organizations"]');
+  if (!needsExperience && !orgsEl) return;
+
+  if (needsExperience) {
+    const experience = await resolveWorkExperience();
+    applyExperienceDisplays(experience);
+  }
+
+  if (orgsEl) {
+    let count = document.querySelectorAll('[data-work-card]').length;
+    if (!count) count = (await countFromPage('work.html', '[data-work-card]')) || 0;
+    orgsEl.textContent = count > 0 ? String(count) : '—';
+  }
 }
 
 function initCertDriveLinks() {
@@ -518,7 +624,38 @@ function initCertDriveLinks() {
   });
 }
 
+function initThemeToggle() {
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  if (!toggle) return;
+
+  const applyTheme = (theme) => {
+    const isLight = theme === 'light';
+    root.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem('portfolio-theme', theme);
+    } catch {
+      /* ignore */
+    }
+    toggle.setAttribute('aria-pressed', String(isLight));
+    toggle.setAttribute(
+      'aria-label',
+      isLight ? 'Switch to dark mode' : 'Switch to light mode'
+    );
+    toggle.title = isLight ? 'Switch to dark mode' : 'Switch to light mode';
+  };
+
+  const current = root.getAttribute('data-theme') || 'dark';
+  applyTheme(current);
+
+  toggle.addEventListener('click', () => {
+    applyTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
+
   const nav = document.querySelector('.main-nav');
   const navList = document.querySelector('.main-nav ul');
   const navToggle = document.querySelector('.nav-toggle');
@@ -588,17 +725,17 @@ document.addEventListener('DOMContentLoaded', () => {
   loadLeetCodeStats();
   loadHackerRankStats();
 
+  initExperienceStats();
+
   document.querySelectorAll('[data-work-card]').forEach((card) => {
     const trigger = card.querySelector('.work-card__trigger');
     const panel = card.querySelector('.work-card__panel');
-    const label = card.querySelector('.work-cta-label');
     if (!trigger || !panel) return;
 
     const setOpen = (open) => {
       trigger.setAttribute('aria-expanded', String(open));
       card.classList.toggle('is-open', open);
       panel.hidden = !open;
-      if (label) label.textContent = open ? 'Hide details' : 'View details';
     };
 
     trigger.addEventListener('click', () => {
@@ -608,12 +745,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (other === card) return;
         const otherTrigger = other.querySelector('.work-card__trigger');
         const otherPanel = other.querySelector('.work-card__panel');
-        const otherLabel = other.querySelector('.work-cta-label');
         if (otherTrigger && otherPanel) {
           otherTrigger.setAttribute('aria-expanded', 'false');
           other.classList.remove('is-open');
           otherPanel.hidden = true;
-          if (otherLabel) otherLabel.textContent = 'View details';
         }
       });
 

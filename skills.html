@@ -3,134 +3,351 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Technical skills, LeetCode, HackerRank, and certifications — Sreekar Bejjanki.">
-  <title>Skills & Certifications | Sreekar Bejjanki</title>
+  <meta name="description" content="Technical skills, coding platforms, and stack — Sreekar Bejjanki, Data Engineer.">
+  <title>Skills | Sreekar Bejjanki</title>
+  <script src="theme-init.js"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portfolio-polish.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-skills">
   <nav class="main-nav" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="logo"><span>SB</span> Sreekar Bejjanki</a>
-      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul>
-        <li><a href="index.html">About</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="nav-end">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" aria-pressed="false" title="Switch to light mode">
+          <span class="theme-toggle__track" aria-hidden="true">
+            <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--sun"></i>
+            <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--moon"></i>
+            <span class="theme-toggle__thumb"></span>
+          </span>
+        </button>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
   <main class="main-content">
-    <div class="page-hero">
-      <h1>Skills & Achievements</h1>
-      <p>Technical stack, coding platforms, and verified certifications—all clickable.</p>
+    <header class="skills-hero">
+      <div class="skills-hero__grid" aria-hidden="true"></div>
+      <div class="container skills-hero__inner">
+        <p class="skills-hero__kicker">Technical arsenal</p>
+        <h1>Skills</h1>
+        <p class="skills-hero__lead">
+          Data engineering, cloud lakehouse platforms, and live coding stats—built for production healthcare and analytics workloads.
+        </p>
+        <ul class="skills-hero__stats" aria-label="Skills summary">
+          <li><strong data-skills-stat="domains">10</strong><span>Skill domains</span></li>
+          <li><strong data-skills-stat="skills">—</strong><span>Technologies</span></li>
+          <li><strong data-skills-stat="platforms">3</strong><span>Live platforms</span></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Marquee: key stack at a glance -->
+    <div class="skills-marquee" aria-hidden="true">
+      <div class="skills-marquee__track">
+        <span>PySpark</span><span>Databricks</span><span>Azure</span><span>Delta Lake</span><span>SQL</span><span>Python</span><span>FHIR</span><span>Kafka</span><span>Spark</span><span>FastAPI</span><span>ETL</span><span>ADLS</span>
+        <span>PySpark</span><span>Databricks</span><span>Azure</span><span>Delta Lake</span><span>SQL</span><span>Python</span><span>FHIR</span><span>Kafka</span><span>Spark</span><span>FastAPI</span><span>ETL</span><span>ADLS</span>
+      </div>
     </div>
 
-    <section class="section">
-      <h2 class="section-title">Coding Platforms</h2>
-      <p class="section-subtitle">Live stats from LeetCode and HackerRank—click any card for full profiles</p>
-      <div class="container card-grid card-grid--platforms">
-        <a href="https://leetcode.com/u/sreekarbejjanki/" class="platform-card ui-card ui-card--platform" target="_blank" rel="noopener noreferrer" id="leetcode-card">
-          <span class="ui-card__icon icon-leetcode platform-card__icon"><i class="fas fa-code"></i></span>
-          <div class="platform-card__body">
-            <span class="ui-card__title">LeetCode</span>
-            <div class="platform-stats-block leetcode-stats-block" data-leetcode-stats data-leetcode-rich data-username="sreekarbejjanki">
-              <span class="platform-stat-line">Loading stats…</span>
+    <section class="section skills-platforms-section" aria-labelledby="platforms-heading">
+      <div class="container">
+        <div class="skills-section-head">
+          <h2 id="platforms-heading">Coding Platforms</h2>
+          <p>Live stats from LeetCode and HackerRank—click any card for full profiles.</p>
+        </div>
+        <div class="skills-platforms-grid">
+          <a href="https://leetcode.com/u/sreekarbejjanki/" class="skills-platform-card platform-card ui-card ui-card--platform" target="_blank" rel="noopener noreferrer" id="leetcode-card">
+            <div class="skills-platform-card__glow" aria-hidden="true"></div>
+            <span class="ui-card__icon icon-leetcode platform-card__icon"><i class="fas fa-code"></i></span>
+            <div class="platform-card__body">
+              <span class="ui-card__title">LeetCode</span>
+              <span class="skills-platform-card__handle">@sreekarbejjanki</span>
+              <div class="platform-stats-block leetcode-stats-block" data-leetcode-stats data-leetcode-rich data-username="sreekarbejjanki">
+                <span class="platform-stat-line">Loading stats…</span>
+              </div>
             </div>
-          </div>
-          <span class="ui-card__arrow platform-card__arrow"><i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://www.hackerrank.com/sreekarbejjanki" class="platform-card ui-card ui-card--platform" target="_blank" rel="noopener noreferrer">
-          <span class="ui-card__icon icon-hackerrank platform-card__icon"><i class="fab fa-hackerrank"></i></span>
-          <div class="platform-card__body">
-            <span class="ui-card__title">HackerRank</span>
-            <div class="platform-stats-block" data-hackerrank-stats data-username="sreekarbejjanki">
-              <span class="platform-stat-line">Loading stats…</span>
+            <span class="ui-card__arrow platform-card__arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.hackerrank.com/sreekarbejjanki" class="skills-platform-card platform-card ui-card ui-card--platform" target="_blank" rel="noopener noreferrer">
+            <div class="skills-platform-card__glow" aria-hidden="true"></div>
+            <span class="ui-card__icon icon-hackerrank platform-card__icon"><i class="fab fa-hackerrank"></i></span>
+            <div class="platform-card__body">
+              <span class="ui-card__title">HackerRank</span>
+              <span class="skills-platform-card__handle">@sreekarbejjanki</span>
+              <div class="platform-stats-block" data-hackerrank-stats data-username="sreekarbejjanki">
+                <span class="platform-stat-line">Loading stats…</span>
+              </div>
             </div>
-          </div>
-          <span class="ui-card__arrow platform-card__arrow"><i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://github.com/bejjankisreekar" class="platform-card ui-card ui-card--platform" target="_blank" rel="noopener noreferrer">
-          <span class="ui-card__icon icon-github platform-card__icon"><i class="fab fa-github"></i></span>
-          <div class="platform-card__body">
-            <span class="ui-card__title">GitHub</span>
-            <p class="platform-card__text">Open-source projects &amp; code samples</p>
-            <p class="platform-card__meta">bejjankisreekar</p>
-          </div>
-          <span class="ui-card__arrow platform-card__arrow"><i class="fas fa-arrow-right"></i></span>
-        </a>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Technical Skills</h2>
-      <div class="container card-grid card-grid--skills">
-        <div class="skill-category ui-card ui-card--panel">
-          <h3><i class="fas fa-code"></i> Programming</h3>
-          <ul>
-            <li>Python</li><li>SQL (T-SQL, PostgreSQL)</li><li>Scala (Basic)</li>
-          </ul>
-        </div>
-        <div class="skill-category ui-card ui-card--panel">
-          <h3><i class="fas fa-cloud"></i> Cloud (Azure)</h3>
-          <ul>
-            <li>Data Factory</li><li>Synapse</li><li>Databricks</li><li>Blob / ADLS</li><li>Functions</li><li>Cosmos DB</li>
-          </ul>
-        </div>
-        <div class="skill-category ui-card ui-card--panel">
-          <h3><i class="fas fa-database"></i> Databases</h3>
-          <ul>
-            <li>SQL Server</li><li>PostgreSQL</li><li>Cosmos DB</li><li>Snowflake</li><li>Data Modeling</li>
-          </ul>
-        </div>
-        <div class="skill-category ui-card ui-card--panel">
-          <h3><i class="fas fa-cogs"></i> ETL & Orchestration</h3>
-          <ul>
-            <li>Azure Data Factory</li><li>Apache Spark</li><li>Kafka</li><li>Airflow</li>
-          </ul>
-        </div>
-        <div class="skill-category ui-card ui-card--panel">
-          <h3><i class="fas fa-chart-line"></i> Big Data</h3>
-          <ul>
-            <li>Databricks</li><li>Delta Lake</li><li>Synapse</li><li>Spark SQL</li><li>Power BI</li>
-          </ul>
-        </div>
-        <div class="skill-category ui-card ui-card--panel">
-          <h3><i class="fas fa-code-branch"></i> DevOps</h3>
-          <ul>
-            <li>Git / GitHub</li>
-            <li>CI/CD</li>
-          </ul>
+            <span class="ui-card__arrow platform-card__arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://github.com/bejjankisreekar" class="skills-platform-card platform-card ui-card ui-card--platform" target="_blank" rel="noopener noreferrer">
+            <div class="skills-platform-card__glow" aria-hidden="true"></div>
+            <span class="ui-card__icon icon-github platform-card__icon"><i class="fab fa-github"></i></span>
+            <div class="platform-card__body">
+              <span class="ui-card__title">GitHub</span>
+              <span class="skills-platform-card__handle">bejjankisreekar</span>
+              <p class="platform-card__text">Open-source projects &amp; production code samples</p>
+            </div>
+            <span class="ui-card__arrow platform-card__arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2 class="section-title">Certifications</h2>
-      <p class="section-subtitle">Click to view certificates on Google Drive—no LinkedIn login needed</p>
-      <div class="container card-grid card-grid--certs">
-        <a href="https://drive.google.com/file/d/YOUR_PYTHON_FILE_ID/view?usp=sharing" class="cert-card ui-card ui-card--square" data-cert-drive-key="python" data-cert-drive="YOUR_PYTHON_FILE_ID" target="_blank" rel="noopener noreferrer">
-          <span class="ui-card__icon icon-linkedin"><i class="fas fa-certificate"></i></span>
-          <span class="ui-card__copy"><span class="ui-card__title">Python</span><span class="ui-card__text">LinkedIn Learning · 2021</span></span>
-          <span class="ui-card__arrow"><i class="fas fa-external-link-alt"></i></span>
-        </a>
-        <a href="https://www.cloudskillsboost.google/course_templates/536" class="cert-card ui-card ui-card--square" target="_blank" rel="noopener noreferrer">
-          <span class="ui-card__icon icon-email"><i class="fab fa-google"></i></span>
-          <span class="ui-card__copy"><span class="ui-card__title">Gen AI</span><span class="ui-card__text">Google · 2023</span></span>
-          <span class="ui-card__arrow"><i class="fas fa-external-link-alt"></i></span>
-        </a>
-        <a href="https://drive.google.com/file/d/YOUR_DJANGO_FILE_ID/view?usp=sharing" class="cert-card ui-card ui-card--square" data-cert-drive-key="django" data-cert-drive="YOUR_DJANGO_FILE_ID" target="_blank" rel="noopener noreferrer">
-          <span class="ui-card__icon icon-linkedin"><i class="fas fa-certificate"></i></span>
-          <span class="ui-card__copy"><span class="ui-card__title">Django</span><span class="ui-card__text">LinkedIn Learning · 2021</span></span>
-          <span class="ui-card__arrow"><i class="fas fa-external-link-alt"></i></span>
+    <section class="section skills-stack-section" id="technical-skills" aria-labelledby="stack-heading">
+      <div class="container">
+        <div class="skills-section-head">
+          <h2 id="stack-heading">Technical Stack</h2>
+          <p>Grouped by domain—filter or search to explore skills aligned with Datalysys and production data work.</p>
+        </div>
+
+        <div class="skills-toolbar">
+          <label class="skills-search" for="skill-search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input type="search" id="skill-search" data-skill-search placeholder="Search skills…" autocomplete="off" aria-label="Search skills">
+          </label>
+          <div class="skills-filters" role="tablist" aria-label="Skill categories">
+            <button type="button" class="skills-filter is-active" role="tab" aria-selected="true" data-skill-filter-btn="all">All</button>
+            <button type="button" class="skills-filter" role="tab" aria-selected="false" data-skill-filter-btn="data-engineering">Data Engineering</button>
+            <button type="button" class="skills-filter" role="tab" aria-selected="false" data-skill-filter-btn="cloud">Cloud</button>
+            <button type="button" class="skills-filter" role="tab" aria-selected="false" data-skill-filter-btn="databases">SQL &amp; DB</button>
+            <button type="button" class="skills-filter" role="tab" aria-selected="false" data-skill-filter-btn="programming">Programming</button>
+            <button type="button" class="skills-filter" role="tab" aria-selected="false" data-skill-filter-btn="devops">DevOps</button>
+            <button type="button" class="skills-filter" role="tab" aria-selected="false" data-skill-filter-btn="apis">APIs</button>
+            <button type="button" class="skills-filter" role="tab" aria-selected="false" data-skill-filter-btn="healthcare">Healthcare</button>
+          </div>
+          <p class="skills-toolbar__meta" aria-live="polite">Showing <span data-skills-visible-count>10</span> domains</p>
+        </div>
+
+        <div class="skills-domains-grid" data-skills-grid>
+          <article class="skill-domain" data-skill-domain data-skill-filter="programming" data-level="92" style="--skill-accent: #22d3ee">
+            <header class="skill-domain__header">
+              <div class="skill-domain__icon"><i class="fas fa-code"></i></div>
+              <div class="skill-domain__titles">
+                <h3>Programming &amp; Frameworks</h3>
+                <span class="skill-domain__level">Expert · 4+ years</span>
+              </div>
+              <div class="skill-domain__meter" role="presentation"><span style="width: 92%"></span></div>
+            </header>
+            <div class="skill-domain__pills">
+              <span class="skill-pill" data-skill-name="python">Python</span>
+              <span class="skill-pill" data-skill-name="scala">Scala (Basic)</span>
+              <span class="skill-pill" data-skill-name="pyspark">PySpark</span>
+              <span class="skill-pill" data-skill-name="pandas">Pandas</span>
+              <span class="skill-pill" data-skill-name="apache spark">Apache Spark</span>
+              <span class="skill-pill" data-skill-name="fastapi">FastAPI</span>
+              <span class="skill-pill" data-skill-name="django">Django</span>
+              <span class="skill-pill" data-skill-name="django rest framework">Django REST Framework</span>
+              <span class="skill-pill" data-skill-name="oop">Object-Oriented Programming</span>
+              <span class="skill-pill" data-skill-name="jupyter">Jupyter</span>
+              <span class="skill-pill" data-skill-name="html5 css">HTML5 &amp; CSS</span>
+              <span class="skill-pill" data-skill-name="web application development">Web Application Development</span>
+            </div>
+          </article>
+
+          <article class="skill-domain" data-skill-domain data-skill-filter="cloud" data-level="94" style="--skill-accent: #818cf8">
+            <header class="skill-domain__header">
+              <div class="skill-domain__icon"><i class="fas fa-cloud"></i></div>
+              <div class="skill-domain__titles">
+                <h3>Cloud — Microsoft Azure</h3>
+                <span class="skill-domain__level">Expert · 2+ years</span>
+              </div>
+              <div class="skill-domain__meter" role="presentation"><span style="width: 94%"></span></div>
+            </header>
+            <div class="skill-domain__pills">
+              <span class="skill-pill" data-skill-name="microsoft azure">Microsoft Azure</span>
+              <span class="skill-pill" data-skill-name="azure data factory">Azure Data Factory</span>
+              <span class="skill-pill" data-skill-name="azure databricks">Azure Databricks</span>
+              <span class="skill-pill" data-skill-name="azure synapse">Azure Synapse</span>
+              <span class="skill-pill" data-skill-name="adls blob storage">Blob Storage / ADLS</span>
+              <span class="skill-pill" data-skill-name="azure functions">Azure Functions</span>
+              <span class="skill-pill" data-skill-name="azure cosmos db">Azure Cosmos DB</span>
+            </div>
+          </article>
+
+          <article class="skill-domain" data-skill-domain data-skill-filter="databases" data-level="88" style="--skill-accent: #34d399">
+            <header class="skill-domain__header">
+              <div class="skill-domain__icon"><i class="fas fa-database"></i></div>
+              <div class="skill-domain__titles">
+                <h3>Databases &amp; SQL</h3>
+                <span class="skill-domain__level">Expert · 3+ years</span>
+              </div>
+              <div class="skill-domain__meter" role="presentation"><span style="width: 88%"></span></div>
+            </header>
+            <div class="skill-domain__pills">
+              <span class="skill-pill" data-skill-name="sql">SQL</span>
+              <span class="skill-pill" data-skill-name="mysql">MySQL</span>
+              <span class="skill-pill" data-skill-name="sql server">SQL Server</span>
+              <span class="skill-pill" data-skill-name="postgresql">PostgreSQL</span>
+              <span class="skill-pill" data-skill-name="rdbms">RDBMS</span>
+              <span class="skill-pill" data-skill-name="dbms">Database Management (DBMS)</span>
+              <span class="skill-pill" data-skill-name="data modeling">Data Modeling</span>
+              <span class="skill-pill" data-skill-name="snowflake">Snowflake</span>
+            </div>
+          </article>
+
+          <article class="skill-domain" data-skill-domain data-skill-filter="data-engineering" data-level="96" style="--skill-accent: #f472b6">
+            <header class="skill-domain__header">
+              <div class="skill-domain__icon"><i class="fas fa-cogs"></i></div>
+              <div class="skill-domain__titles">
+                <h3>Big Data &amp; ETL</h3>
+                <span class="skill-domain__level">Expert · 2+ years</span>
+              </div>
+              <div class="skill-domain__meter" role="presentation"><span style="width: 96%"></span></div>
+            </header>
+            <div class="skill-domain__pills">
+              <span class="skill-pill" data-skill-name="etl">ETL</span>
+              <span class="skill-pill" data-skill-name="azure data factory">Azure Data Factory</span>
+              <span class="skill-pill" data-skill-name="apache spark">Apache Spark</span>
+              <span class="skill-pill" data-skill-name="pyspark">PySpark</span>
+              <span class="skill-pill" data-skill-name="azure databricks">Azure Databricks</span>
+              <span class="skill-pill" data-skill-name="delta lake">Delta Lake</span>
+              <span class="skill-pill" data-skill-name="spark sql">Spark SQL</span>
+              <span class="skill-pill" data-skill-name="kafka">Kafka</span>
+              <span class="skill-pill" data-skill-name="apache airflow">Apache Airflow</span>
+              <span class="skill-pill" data-skill-name="power bi">Power BI</span>
+            </div>
+          </article>
+
+          <article class="skill-domain" data-skill-domain data-skill-filter="healthcare" data-level="82" style="--skill-accent: #fb7185">
+            <header class="skill-domain__header">
+              <div class="skill-domain__icon"><i class="fas fa-heartbeat"></i></div>
+              <div class="skill-domain__titles">
+                <h3>Healthcare &amp; Interoperability</h3>
+                <span class="skill-domain__level">Advanced · 3+ years</span>
+              </div>
+              <div class="skill-domain__meter" role="presentation"><span style="width: 82%"></span></div>
+            </header>
+            <div class="skill-domain__pills">
+              <span class="skill-pill" data-skill-name="fhir">FHIR (Fast Healthcare Interoperability Resources)</span>
+            </div>
+          </article>
+
+          <article class="skill-domain" data-skill-domain data-skill-filter="apis" data-level="78" style="--skill-accent: #a78bfa">
+            <header class="skill-domain__header">
+              <div class="skill-domain__icon"><i class="fas fa-plug"></i></div>
+              <div class="skill-domain__titles">
+                <h3>APIs &amp; Integration</h3>
+                <span class="skill-domain__level">Advanced · 3+ years</span>
+              </div>
+              <div class="skill-domain__meter" role="presentation"><span style="width: 78%"></span></div>
+            </header>
+            <div class="skill-domain__pills">
+              <span class="skill-pill" data-skill-name="rest apis">REST APIs</span>
+              <span class="skill-pill" data-skill-name="json">JSON</span>
+              <span class="skill-pill" data-skill-name="xml">XML</span>
+              <span class="skill-pill" data-skill-name="jwt">JSON Web Token (JWT)</span>
+              <span class="skill-pill" data-skill-name="tcp ip">TCP/IP</span>
+            </div>
+          </article>
+
+          <article class="skill-domain" data-skill-domain data-skill-filter="ai" data-level="70" style="--skill-accent: #fcd34d">
+            <header class="skill-domain__header">
+              <div class="skill-domain__icon"><i class="fas fa-brain"></i></div>
+              <div class="skill-domain__titles">
+                <h3>AI &amp; Emerging Tech</h3>
+                <span class="skill-domain__level">Proficient · 2+ years</span>
+              </div>
+              <div class="skill-domain__meter" role="presentation"><span style="width: 70%"></span></div>
+            </header>
+            <div class="skill-domain__pills">
+              <span class="skill-pill" data-skill-name="llm">Large Language Models (LLM)</span>
+            </div>
+          </article>
+
+          <article class="skill-domain" data-skill-domain data-skill-filter="engineering" data-level="90" style="--skill-accent: #38bdf8">
+            <header class="skill-domain__header">
+              <div class="skill-domain__icon"><i class="fas fa-laptop-code"></i></div>
+              <div class="skill-domain__titles">
+                <h3>Software Engineering</h3>
+                <span class="skill-domain__level">Expert · 5+ years</span>
+              </div>
+              <div class="skill-domain__meter" role="presentation"><span style="width: 90%"></span></div>
+            </header>
+            <div class="skill-domain__pills">
+              <span class="skill-pill" data-skill-name="problem solving">Problem Solving</span>
+              <span class="skill-pill" data-skill-name="dsa">DSA</span>
+              <span class="skill-pill" data-skill-name="data structures">Data Structures</span>
+              <span class="skill-pill" data-skill-name="systems design">Systems Design</span>
+              <span class="skill-pill" data-skill-name="design patterns">Software Design Patterns</span>
+              <span class="skill-pill" data-skill-name="ood">Object-Oriented Design</span>
+              <span class="skill-pill" data-skill-name="debugging">Debugging &amp; Code Review</span>
+              <span class="skill-pill" data-skill-name="computer science">Computer Science</span>
+              <span class="skill-pill" data-skill-name="programming concepts">Programming Concepts</span>
+              <span class="skill-pill" data-skill-name="multiprocessing">Multiprocessing</span>
+              <span class="skill-pill" data-skill-name="troubleshooting">Troubleshooting</span>
+            </div>
+          </article>
+
+          <article class="skill-domain" data-skill-domain data-skill-filter="devops" data-level="85" style="--skill-accent: #94a3b8">
+            <header class="skill-domain__header">
+              <div class="skill-domain__icon"><i class="fas fa-code-branch"></i></div>
+              <div class="skill-domain__titles">
+                <h3>DevOps &amp; Version Control</h3>
+                <span class="skill-domain__level">Advanced · 2+ years</span>
+              </div>
+              <div class="skill-domain__meter" role="presentation"><span style="width: 85%"></span></div>
+            </header>
+            <div class="skill-domain__pills">
+              <span class="skill-pill" data-skill-name="git github">Git / GitHub</span>
+              <span class="skill-pill" data-skill-name="version control">Version Control</span>
+              <span class="skill-pill" data-skill-name="azure devops">Azure DevOps</span>
+              <span class="skill-pill" data-skill-name="ci cd">CI/CD</span>
+            </div>
+          </article>
+
+          <article class="skill-domain" data-skill-domain data-skill-filter="professional" data-level="80" style="--skill-accent: #c084fc">
+            <header class="skill-domain__header">
+              <div class="skill-domain__icon"><i class="fas fa-users"></i></div>
+              <div class="skill-domain__titles">
+                <h3>Professional Skills</h3>
+                <span class="skill-domain__level">Advanced · ongoing</span>
+              </div>
+              <div class="skill-domain__meter" role="presentation"><span style="width: 80%"></span></div>
+            </header>
+            <div class="skill-domain__pills">
+              <span class="skill-pill" data-skill-name="communication">Communication</span>
+              <span class="skill-pill" data-skill-name="oral communication">Oral Communication</span>
+              <span class="skill-pill" data-skill-name="attention to detail">Attention to Detail</span>
+              <span class="skill-pill" data-skill-name="accountability">Accountability</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="skills-empty" data-skills-empty hidden>
+          <div class="skills-empty__icon" aria-hidden="true"><i class="fas fa-filter"></i></div>
+          <h3>No skills match</h3>
+          <p>Try a different filter or clear your search.</p>
+          <button type="button" class="btn primary-btn" data-skills-filter-reset>Reset filters</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-certs-cta" aria-labelledby="certs-cta-heading">
+      <div class="container">
+        <h2 id="certs-cta-heading" class="visually-hidden">Certifications</h2>
+        <a href="certifications.html" class="skills-certs-cta__card">
+          <div class="skills-certs-cta__copy">
+            <h3>Certifications</h3>
+            <p>Google Cloud, LinkedIn Learning, and career credentials—view verified certificates.</p>
+          </div>
+          <span class="skills-certs-cta__action">View all <i class="fas fa-arrow-right"></i></span>
         </a>
       </div>
     </section>
@@ -147,6 +364,8 @@
       </div>
     </div>
   </footer>
+  <script src="portfolio.js"></script>
   <script src="script.js"></script>
+  <script src="skills-page.js"></script>
 </body>
 </html>

@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contact Sreekar Bejjanki — Data Engineer open to opportunities.">
   <title>Contact | Sreekar Bejjanki</title>
+  <script src="theme-init.js"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portfolio-polish.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,16 +17,26 @@
   <nav class="main-nav" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="logo"><span>SB</span> Sreekar Bejjanki</a>
-      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul>
-        <li><a href="index.html">About</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="nav-end">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" aria-pressed="false" title="Switch to light mode">
+          <span class="theme-toggle__track" aria-hidden="true">
+            <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--sun"></i>
+            <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--moon"></i>
+            <span class="theme-toggle__thumb"></span>
+          </span>
+        </button>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -86,6 +98,7 @@
       </div>
     </div>
   </footer>
+  <script src="portfolio.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

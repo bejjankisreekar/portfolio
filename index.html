@@ -6,7 +6,9 @@
   <meta name="description" content="Sreekar Bejjanki — Data Engineer building scalable pipelines on Azure, Databricks, and PySpark.">
   <meta name="author" content="Sreekar Bejjanki">
   <title>Sreekar Bejjanki | Data Engineer</title>
+  <script src="theme-init.js"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portfolio-polish.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,16 +18,26 @@
   <nav class="main-nav" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="logo"><span>SB</span> Sreekar Bejjanki</a>
-      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul>
-        <li><a href="index.html">About</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="nav-end">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" aria-pressed="false" title="Switch to light mode">
+          <span class="theme-toggle__track" aria-hidden="true">
+            <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--sun"></i>
+            <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--moon"></i>
+            <span class="theme-toggle__thumb"></span>
+          </span>
+        </button>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -41,7 +53,9 @@
           Sreekar
           <span class="text-gradient">Bejjanki</span>
         </h1>
+       
         <p class="hero-role">I build scalable data pipelines that turn raw data into decisions.</p>
+        <p class="hero-tagline">Data is the new oil—I build the <strong>refineries</strong>.</p>
         <ul class="hero-metrics" aria-label="Portfolio highlights">
           <li class="hero-metric">
             <strong data-portfolio-stat="projects">—</strong>
@@ -98,7 +112,7 @@
             </div>
             <div class="panel-row">
               <dt>experience</dt>
-              <dd>2+ years</dd>
+              <dd data-portfolio-stat="experience-panel">— years</dd>
             </div>
             <div class="panel-row">
               <dt>focus</dt>
@@ -130,10 +144,10 @@
           </div>
           <i class="fas fa-arrow-right" aria-hidden="true"></i>
         </a>
-        <a href="skills.html" class="panel-card panel-card--link">
+        <a href="certifications.html" class="panel-card panel-card--link">
           <div>
             <span class="panel-link-label">Credentials</span>
-            <strong>Certifications & platforms</strong>
+            <strong>Certifications</strong>
             <span class="panel-link-meta">Google Cloud · LinkedIn Learning</span>
           </div>
           <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -157,9 +171,6 @@
             </p>
             <p>
               Today that means <strong>Azure</strong>, <strong>Databricks</strong>, and <strong>Unity Catalog</strong> for secure lakehouse patterns, plus <strong>Python</strong> and <strong>SQL Server</strong> where operational systems need tight integration.
-            </p>
-            <p class="about-quote">
-              Data is the new oil—I build the <strong>refineries</strong>.
             </p>
             <a href="work.html" class="text-link">
               See work experience <i class="fas fa-arrow-right"></i>
@@ -202,8 +213,13 @@
             <span class="ui-card__arrow"><i class="fas fa-arrow-right"></i></span>
           </a>
           <a href="skills.html" class="bento-card ui-card ui-card--square">
+            <span class="ui-card__icon"><i class="fas fa-layer-group"></i></span>
+            <span class="ui-card__copy"><span class="ui-card__title">Skills</span><span class="ui-card__text">Stack &amp; platforms</span></span>
+            <span class="ui-card__arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="certifications.html" class="bento-card ui-card ui-card--square">
             <span class="ui-card__icon"><i class="fas fa-award"></i></span>
-            <span class="ui-card__copy"><span class="ui-card__title">Skills</span><span class="ui-card__text" data-portfolio-stat="certifications-bento">— certifications</span></span>
+            <span class="ui-card__copy"><span class="ui-card__title">Certifications</span><span class="ui-card__text" data-portfolio-stat="certifications-bento">— earned</span></span>
             <span class="ui-card__arrow"><i class="fas fa-arrow-right"></i></span>
           </a>
           <a href="https://github.com/bejjankisreekar" class="bento-card ui-card ui-card--square" target="_blank" rel="noopener noreferrer">
@@ -227,6 +243,7 @@
       </div>
     </div>
   </footer>
+  <script src="portfolio.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

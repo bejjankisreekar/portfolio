@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Work experience of Sreekar Bejjanki — Data Engineer and Research Analyst.">
   <title>Work Experience | Sreekar Bejjanki</title>
+  <script src="theme-init.js"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portfolio-polish.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,157 +17,218 @@
   <nav class="main-nav" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="logo"><span>SB</span> Sreekar Bejjanki</a>
-      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul>
-        <li><a href="index.html">About</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="nav-end">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" aria-pressed="false" title="Switch to light mode">
+          <span class="theme-toggle__track" aria-hidden="true">
+            <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--sun"></i>
+            <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--moon"></i>
+            <span class="theme-toggle__thumb"></span>
+          </span>
+        </button>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
   <main class="main-content">
-    <div class="page-hero">
-      <h1>Work Experience</h1>
-      <p>Click a role to expand projects, tech stack, and full responsibilities.</p>
-    </div>
+    <header class="work-hero">
+      <div class="container work-hero__inner">
+        <p class="work-hero__kicker">Career timeline</p>
+        <h1>Work Experience</h1>
+        <p class="work-hero__lead">Production data engineering and research roles—expand each position for projects, stack, and measurable impact.</p>
+        <ul class="work-hero__stats" aria-label="Experience summary">
+          <li><strong data-experience-stat="total">—</strong><span>Years experience</span></li>
+          <li><strong data-experience-stat="data">—</strong><span>Years Data Experience</span></li>
+          <li><strong data-work-hero-stat="organizations">—</strong><span>Organizations</span></li>
+          <li><strong>1M+</strong><span>Records processed</span></li>
+        </ul>
+      </div>
+    </header>
 
-    <section class="section">
-      <div class="container work-accordion">
+    <section class="section work-section">
+      <div class="container">
+        <div class="work-timeline" role="list">
 
-        <article class="work-card" data-work-card>
-          <button type="button" class="work-card__trigger" aria-expanded="false" aria-controls="work-panel-1" id="work-trigger-1">
-            <div class="work-card__head">
-              <span class="work-badge work-badge--active">Current</span>
-              <div class="work-card__titles">
-                <h3>Data Engineer</h3>
-                <p class="work-company">Datalysys Software Solutions Pvt Ltd. · Hyderabad</p>
-                <span class="work-duration"><i class="far fa-calendar-alt"></i> June 2022 — Present</span>
-              </div>
+          <article class="work-card work-card--current" data-work-card data-work-start="2022-06" data-work-current role="listitem">
+            <div class="work-timeline__marker" aria-hidden="true">
+              <span class="work-timeline__dot"></span>
+              <span class="work-timeline__line"></span>
             </div>
-            <span class="work-card__cta">
-              <span class="work-cta-label">View details</span>
-              <span class="work-cta-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
-            </span>
-          </button>
 
-          <div class="work-card__panel" id="work-panel-1" role="region" aria-labelledby="work-trigger-1" hidden>
-            <div class="work-panel-inner">
-              <div class="work-detail-block">
-                <h4><i class="fas fa-list-check"></i> Key responsibilities</h4>
-                <ul class="work-list">
-                  <li>Developed 5+ Databricks notebooks to automate SMS messaging workflows for healthcare use cases.</li>
-                  <li>Used PySpark to ingest and transform patient data for message eligibility and scheduling.</li>
-                  <li>Integrated Twilio API for real-time SMS notifications and delivery status tracking.</li>
-                  <li>Secured credential access using Azure Key Vault and Unity Catalog secrets management.</li>
-                  <li>Executed SQL Server stored procedures for dynamic configuration and activity logging.</li>
-                  <li>Built FHIR ingestion pipelines with Delta MERGE, CDC, and 1M+ record batch processing.</li>
-                </ul>
-              </div>
-
-              <div class="work-detail-block">
-                <h4><i class="fas fa-folder-open"></i> Projects at this role</h4>
-                <div class="work-projects">
-                  <a href="projects.html" class="work-project-chip">
-                    <strong>Patient Messaging Automation</strong>
-                    <span>SMS workflows · Twilio · Databricks</span>
-                  </a>
-                  <a href="projects.html" class="work-project-chip">
-                    <strong>FHIR Patient 360 Data Lake</strong>
-                    <span>HL7 FHIR · Delta Lake · Unity Catalog</span>
-                  </a>
-                </div>
-              </div>
-
-              <div class="work-detail-block">
-                <h4><i class="fas fa-layer-group"></i> Tech stack</h4>
-                <div class="work-tech">
-                  <span>Python</span><span>PySpark</span><span>Databricks</span><span>Delta Lake</span>
-                  <span>Azure</span><span>ADLS Gen2</span><span>Key Vault</span><span>Unity Catalog</span>
-                  <span>SQL Server</span><span>Twilio API</span><span>FHIR</span><span>HL7 JSON</span>
-                </div>
-              </div>
-
-              <div class="work-detail-block work-detail-block--highlight">
-                <h4><i class="fas fa-chart-simple"></i> Impact</h4>
-                <p>Delivered production-grade healthcare data pipelines with secure secrets handling, governed lakehouse tables, and automated patient communication at scale.</p>
-              </div>
-
-              <div class="work-panel-actions">
-                <a href="projects.html" class="btn primary-btn"><i class="fas fa-folder-open"></i> All Projects</a>
-                <a href="https://github.com/bejjankisreekar/ClientConnect" class="btn secondary-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> ClientConnect Repo</a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="work-card" data-work-card>
-          <button type="button" class="work-card__trigger" aria-expanded="false" aria-controls="work-panel-2" id="work-trigger-2">
-            <div class="work-card__head">
-              <span class="work-badge">Past</span>
-              <div class="work-card__titles">
-                <h3>Research Analyst</h3>
-                <p class="work-company">FactSet Systems · Hyderabad</p>
-                <span class="work-duration"><i class="far fa-calendar-alt"></i> November 2019 — May 2022</span>
-              </div>
-            </div>
-            <span class="work-card__cta">
-              <span class="work-cta-label">View details</span>
-              <span class="work-cta-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
-            </span>
-          </button>
-
-          <div class="work-card__panel" id="work-panel-2" role="region" aria-labelledby="work-trigger-2" hidden>
-            <div class="work-panel-inner">
-              <div class="work-detail-block">
-                <h4><i class="fas fa-list-check"></i> Key responsibilities</h4>
-                <ul class="work-list">
-                  <li>Gathered, interpreted, and analyzed financial data from corporate reports and market sources.</li>
-                  <li>Built analytical models and reports to support investment research workflows.</li>
-                  <li>Identified market trends and patterns across equities and macro datasets.</li>
-                  <li>Collaborated with research teams to validate data quality and reporting accuracy.</li>
-                </ul>
-              </div>
-
-              <div class="work-detail-block">
-                <h4><i class="fas fa-briefcase"></i> Focus areas</h4>
-                <div class="work-projects">
-                  <div class="work-project-chip work-project-chip--static">
-                    <strong>Investment research analytics</strong>
-                    <span>Corporate filings · Market data · Trend analysis</span>
+            <div class="work-card__shell">
+              <button type="button" class="work-card__trigger" aria-expanded="false" aria-controls="work-panel-1" id="work-trigger-1">
+                <div class="work-card__brand">
+                  <span class="work-card__icon" aria-hidden="true"><i class="fas fa-database"></i></span>
+                  <div class="work-card__meta">
+                    <div class="work-card__meta-top">
+                      <span class="work-badge work-badge--active">Current</span>
+                      <span class="work-duration"><i class="far fa-calendar-alt"></i> Jun 2022 — Present</span>
+                    </div>
+                    <h2 class="work-card__role">Data Engineer</h2>
+                    <p class="work-card__company">Datalysys Software Solutions Pvt Ltd. · Hyderabad</p>
                   </div>
-                  <div class="work-project-chip work-project-chip--static">
-                    <strong>Prediction & forecasting support</strong>
-                    <span>Model inputs · Accuracy validation · Reporting</span>
+                </div>
+                <div class="work-card__aside">
+                  <div class="work-card__tags" aria-hidden="true">
+                    <span>PySpark</span><span>Databricks</span><span>Azure</span>
+                  </div>
+                  <span class="work-card__toggle" aria-hidden="true">
+                    <i class="fas fa-chevron-down"></i>
+                  </span>
+                </div>
+              </button>
+
+              <div class="work-card__panel" id="work-panel-1" role="region" aria-labelledby="work-trigger-1" hidden>
+                <div class="work-panel__grid">
+                  <div class="work-block work-block--full">
+                    <h3 class="work-block__title"><i class="fas fa-list-check"></i> Key responsibilities</h3>
+                    <ul class="work-list">
+                      <li>Developed 5+ Databricks notebooks to automate SMS messaging workflows for healthcare use cases.</li>
+                      <li>Used PySpark to ingest and transform patient data for message eligibility and scheduling.</li>
+                      <li>Integrated Twilio API for real-time SMS notifications and delivery status tracking.</li>
+                      <li>Secured credential access using Azure Key Vault and Unity Catalog secrets management.</li>
+                      <li>Executed SQL Server stored procedures for dynamic configuration and activity logging.</li>
+                      <li>Built FHIR ingestion pipelines with Delta MERGE, CDC, and 1M+ record batch processing.</li>
+                    </ul>
+                  </div>
+
+                  <div class="work-block">
+                    <h3 class="work-block__title"><i class="fas fa-folder-open"></i> Projects</h3>
+                    <div class="work-projects">
+                      <a href="projects.html" class="work-project-chip">
+                        <span class="work-project-chip__icon"><i class="fas fa-arrow-right"></i></span>
+                        <span class="work-project-chip__body">
+                          <strong>Patient Messaging Automation</strong>
+                          <span>SMS · Twilio · Databricks</span>
+                        </span>
+                      </a>
+                      <a href="projects.html" class="work-project-chip">
+                        <span class="work-project-chip__icon"><i class="fas fa-arrow-right"></i></span>
+                        <span class="work-project-chip__body">
+                          <strong>FHIR Patient 360 Data Lake</strong>
+                          <span>HL7 FHIR · Delta Lake · Unity Catalog</span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="work-block">
+                    <h3 class="work-block__title"><i class="fas fa-layer-group"></i> Tech stack</h3>
+                    <div class="work-tech">
+                      <span>Python</span><span>PySpark</span><span>Databricks</span><span>Delta Lake</span>
+                      <span>Azure</span><span>ADLS Gen2</span><span>Key Vault</span><span>Unity Catalog</span>
+                      <span>SQL Server</span><span>Twilio API</span><span>FHIR</span>
+                    </div>
+                  </div>
+
+                  <div class="work-block work-block--impact work-block--full">
+                    <h3 class="work-block__title"><i class="fas fa-bolt"></i> Impact</h3>
+                    <p>Delivered production-grade healthcare data pipelines with secure secrets handling, governed lakehouse tables, and automated patient communication at scale.</p>
+                  </div>
+
+                  <div class="work-block work-block--actions work-block--full">
+                    <a href="projects.html" class="btn primary-btn"><i class="fas fa-folder-open"></i> View projects</a>
+                    <a href="https://github.com/bejjankisreekar/ClientConnect" class="btn secondary-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> ClientConnect</a>
                   </div>
                 </div>
               </div>
+            </div>
+          </article>
 
-              <div class="work-detail-block">
-                <h4><i class="fas fa-layer-group"></i> Tech & tools</h4>
-                <div class="work-tech">
-                  <span>Financial Data APIs</span><span>Excel / Spreadsheets</span><span>SQL</span>
-                  <span>Data Validation</span><span>Statistical Analysis</span><span>Reporting</span>
+          <article class="work-card work-card--past" data-work-card data-work-start="2019-11" data-work-end="2022-05" role="listitem">
+            <div class="work-timeline__marker" aria-hidden="true">
+              <span class="work-timeline__dot"></span>
+            </div>
+
+            <div class="work-card__shell">
+              <button type="button" class="work-card__trigger" aria-expanded="false" aria-controls="work-panel-2" id="work-trigger-2">
+                <div class="work-card__brand">
+                  <span class="work-card__icon work-card__icon--past" aria-hidden="true"><i class="fas fa-chart-line"></i></span>
+                  <div class="work-card__meta">
+                    <div class="work-card__meta-top">
+                      <span class="work-badge">Previous</span>
+                      <span class="work-duration"><i class="far fa-calendar-alt"></i> Nov 2019 — May 2022</span>
+                    </div>
+                    <h2 class="work-card__role">Research Analyst</h2>
+                    <p class="work-card__company">FactSet Systems · Hyderabad</p>
+                  </div>
+                </div>
+                <div class="work-card__aside">
+                  <div class="work-card__tags" aria-hidden="true">
+                    <span>SQL</span><span>Analytics</span><span>Research</span>
+                  </div>
+                  <span class="work-card__toggle" aria-hidden="true">
+                    <i class="fas fa-chevron-down"></i>
+                  </span>
+                </div>
+              </button>
+
+              <div class="work-card__panel" id="work-panel-2" role="region" aria-labelledby="work-trigger-2" hidden>
+                <div class="work-panel__grid">
+                  <div class="work-block work-block--full">
+                    <h3 class="work-block__title"><i class="fas fa-list-check"></i> Key responsibilities</h3>
+                    <ul class="work-list">
+                      <li>Gathered, interpreted, and analyzed financial data from corporate reports and market sources.</li>
+                      <li>Built analytical models and reports to support investment research workflows.</li>
+                      <li>Identified market trends and patterns across equities and macro datasets.</li>
+                      <li>Collaborated with research teams to validate data quality and reporting accuracy.</li>
+                    </ul>
+                  </div>
+
+                  <div class="work-block">
+                    <h3 class="work-block__title"><i class="fas fa-briefcase"></i> Focus areas</h3>
+                    <div class="work-projects">
+                      <div class="work-project-chip work-project-chip--static">
+                        <span class="work-project-chip__icon"><i class="fas fa-chart-pie"></i></span>
+                        <span class="work-project-chip__body">
+                          <strong>Investment research analytics</strong>
+                          <span>Filings · Market data · Trends</span>
+                        </span>
+                      </div>
+                      <div class="work-project-chip work-project-chip--static">
+                        <span class="work-project-chip__icon"><i class="fas fa-chart-pie"></i></span>
+                        <span class="work-project-chip__body">
+                          <strong>Forecasting support</strong>
+                          <span>Models · Validation · Reporting</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="work-block">
+                    <h3 class="work-block__title"><i class="fas fa-layer-group"></i> Tech &amp; tools</h3>
+                    <div class="work-tech">
+                      <span>Financial APIs</span><span>Excel</span><span>SQL</span>
+                      <span>Data validation</span><span>Statistical analysis</span><span>Reporting</span>
+                    </div>
+                  </div>
+
+                  <div class="work-block work-block--impact work-block--full">
+                    <h3 class="work-block__title"><i class="fas fa-bolt"></i> Impact</h3>
+                    <p>Improved investment prediction accuracy by <strong>85%</strong> through rigorous data interpretation and trend identification.</p>
+                  </div>
+
+                  <div class="work-block work-block--actions work-block--full">
+                    <a href="skills.html" class="btn primary-btn"><i class="fas fa-layer-group"></i> Skills</a>
+                    <a href="certifications.html" class="btn secondary-btn"><i class="fas fa-award"></i> Certifications</a>
+                    <a href="contact.html" class="btn secondary-btn"><i class="fas fa-envelope"></i> Get in touch</a>
+                  </div>
                 </div>
               </div>
-
-              <div class="work-detail-block work-detail-block--highlight">
-                <h4><i class="fas fa-chart-simple"></i> Impact</h4>
-                <p>Contributed to research insights that improved investment prediction accuracy by <strong>85%</strong> through rigorous data interpretation and trend identification.</p>
-              </div>
-
-              <div class="work-panel-actions">
-                <a href="skills.html" class="btn primary-btn"><i class="fas fa-award"></i> Skills & Certifications</a>
-                <a href="contact.html" class="btn secondary-btn"><i class="fas fa-envelope"></i> Contact Me</a>
-              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
+        </div>
       </div>
     </section>
   </main>
@@ -180,6 +243,7 @@
       </div>
     </div>
   </footer>
+  <script src="portfolio.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional certifications — Sreekar Bejjanki, Data Engineer. Google Cloud, LinkedIn Learning, and more.">
+  <title>Certifications | Sreekar Bejjanki</title>
+  <script src="theme-init.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portfolio-polish.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="page-certifications">
+  <nav class="main-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="logo"><span>SB</span> Sreekar Bejjanki</a>
+      <div class="nav-end">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" aria-pressed="false" title="Switch to light mode">
+          <span class="theme-toggle__track" aria-hidden="true">
+            <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--sun"></i>
+            <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--moon"></i>
+            <span class="theme-toggle__thumb"></span>
+          </span>
+        </button>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <header class="certs-hero">
+      <div class="certs-hero__grid" aria-hidden="true"></div>
+      <div class="container certs-hero__inner">
+        <p class="certs-hero__kicker">Verified credentials</p>
+        <h1>Certifications</h1>
+        <p class="certs-hero__lead">
+          Industry-recognized training in data engineering, cloud, and software—backed by Google Cloud and LinkedIn Learning.
+        </p>
+        <ul class="certs-hero__stats" aria-label="Certifications summary">
+          <li><strong data-certs-stat="count">4</strong><span>Featured certs</span></li>
+          <li><strong>2</strong><span>Issuers</span></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="section certs-section" aria-labelledby="certs-grid-heading">
+      <div class="container">
+        <div class="certs-section-head">
+          <h2 id="certs-grid-heading" class="visually-hidden">Certificate list</h2>
+          <p>Click any certificate to open the credential on Google Drive or the issuer site.</p>
+        </div>
+
+        <div class="certs-toolbar">
+          <div class="certs-filters" role="tablist" aria-label="Certification categories">
+            <button type="button" class="certs-filter is-active" role="tab" aria-selected="true" data-cert-filter-btn="all">All</button>
+            <button type="button" class="certs-filter" role="tab" aria-selected="false" data-cert-filter-btn="cloud">Cloud &amp; AI</button>
+            <button type="button" class="certs-filter" role="tab" aria-selected="false" data-cert-filter-btn="learning">LinkedIn Learning</button>
+            <button type="button" class="certs-filter" role="tab" aria-selected="false" data-cert-filter-btn="career">Career Paths</button>
+          </div>
+          <p class="certs-toolbar__meta" aria-live="polite">Showing <span data-certs-visible-count>4</span> certificates</p>
+        </div>
+
+        <div class="certs-showcase-grid" data-certs-grid>
+          <a
+            href="https://drive.google.com/file/d/10JZ-4SVTCSGfES_kh8Pp7Sjhiv8Pe8Z2/view?usp=drive_link"
+            class="cert-showcase"
+            data-cert-item
+            data-cert-filter="learning"
+            data-cert-drive-key="python"
+            data-cert-drive="10JZ-4SVTCSGfES_kh8Pp7Sjhiv8Pe8Z2"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="--cert-accent: #0891b2"
+          >
+            <span class="cert-showcase__shine" aria-hidden="true"></span>
+            <div class="cert-showcase__icon icon-linkedin"><i class="fas fa-certificate"></i></div>
+            <div class="cert-showcase__body">
+              <span class="cert-showcase__issuer">LinkedIn Learning</span>
+              <h3>Python</h3>
+              <p>Foundational Python for data and application development.</p>
+              <span class="cert-showcase__meta">Issued 2021</span>
+            </div>
+            <span class="cert-showcase__cta">View certificate <i class="fas fa-external-link-alt"></i></span>
+          </a>
+
+          <a
+            href="https://www.skills.google/public_profiles/c89d12d4-015b-4acf-9c3b-fb5d2cc46975/badges/4229399?utm_medium=social&amp;utm_source=linkedin&amp;utm_campaign=ql-social-share"
+            class="cert-showcase"
+            data-cert-item
+            data-cert-filter="cloud"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="--cert-accent: #4285f4"
+          >
+            <span class="cert-showcase__shine" aria-hidden="true"></span>
+            <div class="cert-showcase__icon icon-email"><i class="fab fa-google"></i></div>
+            <div class="cert-showcase__body">
+              <span class="cert-showcase__issuer">Google Cloud</span>
+              <h3>Generative AI</h3>
+              <p>Google Cloud Skills Boost — generative AI fundamentals and cloud context.</p>
+              <span class="cert-showcase__meta">Issued 2023</span>
+            </div>
+            <span class="cert-showcase__cta">View badge <i class="fas fa-external-link-alt"></i></span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/sreekarbejjanki/details/certifications/"
+            class="cert-showcase"
+            data-cert-item
+            data-cert-filter="career"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="--cert-accent: #0a66c2"
+          >
+            <span class="cert-showcase__shine" aria-hidden="true"></span>
+            <div class="cert-showcase__icon icon-linkedin"><i class="fas fa-chart-line"></i></div>
+            <div class="cert-showcase__body">
+              <span class="cert-showcase__issuer">LinkedIn Learning</span>
+              <h3>Data Science &amp; Analytics</h3>
+              <p>Career path foundations — analytics, SQL, and data storytelling.</p>
+              <span class="cert-showcase__meta">Career Paths · First Steps</span>
+            </div>
+            <span class="cert-showcase__cta">View on LinkedIn <i class="fas fa-external-link-alt"></i></span>
+          </a>
+
+          <a
+            href="https://drive.google.com/file/d/YOUR_DJANGO_FILE_ID/view?usp=sharing"
+            class="cert-showcase"
+            data-cert-item
+            data-cert-filter="learning"
+            data-cert-drive-key="django"
+            data-cert-drive="YOUR_DJANGO_FILE_ID"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="--cert-accent: #059669"
+          >
+            <span class="cert-showcase__shine" aria-hidden="true"></span>
+            <div class="cert-showcase__icon icon-linkedin"><i class="fas fa-certificate"></i></div>
+            <div class="cert-showcase__body">
+              <span class="cert-showcase__issuer">LinkedIn Learning</span>
+              <h3>Django</h3>
+              <p>Web framework essentials for APIs and full-stack Python applications.</p>
+              <span class="cert-showcase__meta">Issued 2021</span>
+            </div>
+            <span class="cert-showcase__cta">View certificate <i class="fas fa-external-link-alt"></i></span>
+          </a>
+        </div>
+
+        <div class="certs-empty" data-certs-empty hidden>
+          <div class="certs-empty__icon" aria-hidden="true"><i class="fas fa-award"></i></div>
+          <h3>No certificates in this category</h3>
+          <p>Try another filter or view all credentials.</p>
+          <button type="button" class="btn primary-btn" data-certs-filter-reset>View all</button>
+        </div>
+
+        <aside class="certs-linkedin-banner">
+          <div class="certs-linkedin-banner__copy">
+            <h3>Full certification history</h3>
+            <p>Additional credentials and course completions are listed on LinkedIn.</p>
+          </div>
+          <a href="https://www.linkedin.com/in/sreekarbejjanki/details/certifications/" class="btn primary-btn" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i> View all on LinkedIn
+          </a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Sreekar Bejjanki. All rights reserved.</p>
+      <div class="footer-social-links">
+        <a href="https://github.com/bejjankisreekar" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sreekarbejjanki/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://leetcode.com/u/sreekarbejjanki/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+        <a href="https://www.hackerrank.com/sreekarbejjanki" target="_blank" rel="noopener noreferrer" aria-label="HackerRank"><i class="fab fa-hackerrank"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="portfolio.js"></script>
+  <script src="script.js"></script>
+  <script src="certifications-page.js"></script>
+</body>
+</html>

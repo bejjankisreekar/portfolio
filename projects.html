@@ -3,128 +3,260 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Data engineering projects by Sreekar Bejjanki — healthcare pipelines, FHIR integration, and more.">
+  <meta name="description" content="Data engineering projects by Sreekar Bejjanki — healthcare pipelines, FHIR integration, and open-source work.">
   <title>Projects | Sreekar Bejjanki</title>
+  <script src="theme-init.js"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portfolio-polish.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-projects">
   <nav class="main-nav" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="logo"><span>SB</span> Sreekar Bejjanki</a>
-      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul>
-        <li><a href="index.html">About</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="nav-end">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" aria-pressed="false" title="Switch to light mode">
+          <span class="theme-toggle__track" aria-hidden="true">
+            <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--sun"></i>
+            <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--moon"></i>
+            <span class="theme-toggle__thumb"></span>
+          </span>
+        </button>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
   <main class="main-content">
-    <div class="page-hero">
-      <h1>Projects</h1>
-      <p>Production data systems and open-source work—click any card to explore further.</p>
-    </div>
+    <header class="projects-hero">
+      <div class="projects-hero__grid" aria-hidden="true"></div>
+      <div class="container projects-hero__inner">
+        <p class="projects-hero__kicker">Portfolio showcase</p>
+        <h1>Selected Projects</h1>
+        <p class="projects-hero__lead">
+          Production data systems and open-source builds—engineered for scale, governance, and real-world healthcare workflows.
+        </p>
+        <ul class="projects-hero__stats" aria-label="Project summary">
+          <li><strong data-projects-stat="count">5</strong><span>Total projects</span></li>
+          <li><strong data-projects-stat="featured">2</strong><span>Featured builds</span></li>
+          <li><strong>1M+</strong><span>Records engineered</span></li>
+        </ul>
+      </div>
+    </header>
 
-    <section class="section">
-      <div class="container card-grid card-grid--rect">
-        <article class="project-card ui-card ui-card--rect" data-project-card>
-          <h3>Patient Messaging Automation Platform</h3>
-          <ul>
-            <li>Developed 5+ Databricks notebooks to automate SMS workflows for healthcare.</li>
-            <li>Used PySpark to ingest and transform patient data for eligibility and scheduling.</li>
-            <li>Integrated Twilio API for real-time notifications and delivery tracking.</li>
-            <li>Secured credentials via Azure Key Vault and Unity Catalog.</li>
-            <li>Executed SQL Server stored procedures for configuration and logging.</li>
-          </ul>
-          <div class="project-tech">
-            <span>Python</span><span>Databricks</span><span>Twilio</span><span>Key Vault</span><span>SQL Server</span>
+    <section class="section projects-section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="projects-toolbar">
+          <h2 id="projects-heading" class="visually-hidden">Filter projects</h2>
+          <div class="projects-filters" role="tablist" aria-label="Project categories">
+            <button type="button" class="projects-filter is-active" role="tab" aria-selected="true" data-filter="all">All</button>
+            <button type="button" class="projects-filter" role="tab" aria-selected="false" data-filter="healthcare">Healthcare</button>
+            <button type="button" class="projects-filter" role="tab" aria-selected="false" data-filter="data-engineering">Data Engineering</button>
+            <button type="button" class="projects-filter" role="tab" aria-selected="false" data-filter="fullstack">Full Stack</button>
+            <button type="button" class="projects-filter" role="tab" aria-selected="false" data-filter="open-source">Open Source</button>
           </div>
-          <div class="project-links">
-            <a href="https://github.com/bejjankisreekar/ClientConnect" class="btn secondary-btn" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i> View Related Repo
-            </a>
-            <a href="contact.html" class="btn primary-btn">
-              <i class="fas fa-envelope"></i> Discuss Project
-            </a>
-          </div>
-        </article>
+          <p class="projects-toolbar__meta" aria-live="polite">
+            Showing <span data-projects-visible-count>5</span> projects
+          </p>
+        </div>
 
-        <article class="project-card ui-card ui-card--rect" data-project-card>
-          <h3>FHIR Data Lake — Unified Patient 360 Pipeline</h3>
-          <ul>
-            <li>Built Databricks pipelines to ingest and flatten FHIR resources (Patient, Vitals, Appointments).</li>
-            <li>Parsed HL7 FHIR JSON into structured PySpark DataFrames.</li>
-            <li>Consolidated data into Delta tables with Unity Catalog governance.</li>
-            <li>Applied CDC with Delta MERGE and deduplication on MRN and Encounter ID.</li>
-            <li>Processed 1M+ records with optimized batch loads and schema validation.</li>
-          </ul>
-          <div class="project-tech">
-            <span>Databricks</span><span>PySpark</span><span>FHIR</span><span>Delta Lake</span><span>Unity Catalog</span><span>ADLS</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/bejjankisreekar" class="btn secondary-btn" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i> GitHub Profile
-            </a>
-            <a href="work.html" class="btn primary-btn">
-              <i class="fas fa-briefcase"></i> Work Experience
-            </a>
-          </div>
-        </article>
+        <div class="projects-grid" data-projects-grid>
+          <!-- Featured: healthcare messaging -->
+          <article
+            class="project-showcase"
+            data-project-card
+            data-category="healthcare data-engineering"
+            data-featured="true"
+            style="--project-delay: 0ms"
+          >
+            <div class="project-showcase__visual project-showcase__visual--healthcare">
+              <div class="project-showcase__visual-glow" aria-hidden="true"></div>
+              <div class="project-showcase__visual-inner">
+                <i class="fas fa-comments" aria-hidden="true"></i>
+              </div>
+              <span class="project-showcase__badge">Featured</span>
+            </div>
+            <div class="project-showcase__body">
+              <div class="project-showcase__head">
+                <h3>Patient Messaging Automation</h3>
+                <span class="project-showcase__year">2024 — Present</span>
+              </div>
+              <p class="project-showcase__desc">
+                Automated SMS workflows for healthcare—PySpark eligibility pipelines, Twilio delivery, and secure Azure secrets management.
+              </p>
+              <div class="project-showcase__tech" aria-label="Technologies">
+                <span>Python</span><span>Databricks</span><span>Twilio</span><span>Key Vault</span><span>SQL Server</span>
+              </div>
+              <div class="project-showcase__actions">
+                <a href="https://github.com/bejjankisreekar/ClientConnect" class="project-btn project-btn--ghost" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="contact.html" class="project-btn project-btn--primary">
+                  <i class="fas fa-arrow-right"></i> Discuss
+                </a>
+              </div>
+            </div>
+          </article>
 
-        <article class="project-card ui-card ui-card--rect" data-project-card>
-          <h3>HRMS — Human Resource Management System</h3>
-          <ul>
-            <li>Full-stack HR management application for employee records and workflows.</li>
-            <li>Demonstrates end-to-end development beyond data engineering.</li>
-          </ul>
-          <div class="project-tech">
-            <span>Full Stack</span><span>Database</span><span>Web App</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/bejjankisreekar/HRMS" class="btn primary-btn" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i> View on GitHub
-            </a>
-          </div>
-        </article>
+          <!-- Featured: FHIR -->
+          <article
+            class="project-showcase"
+            data-project-card
+            data-category="healthcare data-engineering"
+            data-featured="true"
+            style="--project-delay: 80ms"
+          >
+            <div class="project-showcase__visual project-showcase__visual--fhir">
+              <div class="project-showcase__visual-glow" aria-hidden="true"></div>
+              <div class="project-showcase__visual-inner">
+                <i class="fas fa-database" aria-hidden="true"></i>
+              </div>
+              <span class="project-showcase__badge">Featured</span>
+            </div>
+            <div class="project-showcase__body">
+              <div class="project-showcase__head">
+                <h3>FHIR Patient 360 Data Lake</h3>
+                <span class="project-showcase__year">2023 — 2024</span>
+              </div>
+              <p class="project-showcase__desc">
+                Unified lakehouse for HL7 FHIR resources—Delta MERGE CDC, Unity Catalog governance, and 1M+ record batch ingestion.
+              </p>
+              <div class="project-showcase__tech" aria-label="Technologies">
+                <span>PySpark</span><span>Delta Lake</span><span>FHIR</span><span>Unity Catalog</span><span>ADLS</span>
+              </div>
+              <div class="project-showcase__actions">
+                <a href="https://github.com/bejjankisreekar" class="project-btn project-btn--ghost" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="work.html" class="project-btn project-btn--primary">
+                  <i class="fas fa-briefcase"></i> Case study
+                </a>
+              </div>
+            </div>
+          </article>
 
-        <article class="project-card ui-card ui-card--rect" data-project-card>
-          <h3>Crypto Wallet</h3>
-          <ul>
-            <li>Blockchain wallet application exploring distributed systems concepts.</li>
-          </ul>
-          <div class="project-tech">
-            <span>Blockchain</span><span>Application</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/bejjankisreekar/crypto_wallet" class="btn primary-btn" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i> View on GitHub
-            </a>
-          </div>
-        </article>
+          <article
+            class="project-showcase"
+            data-project-card
+            data-category="fullstack open-source"
+            style="--project-delay: 160ms"
+          >
+            <div class="project-showcase__visual project-showcase__visual--fullstack">
+              <div class="project-showcase__visual-glow" aria-hidden="true"></div>
+              <div class="project-showcase__visual-inner">
+                <i class="fas fa-users" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="project-showcase__body">
+              <div class="project-showcase__head">
+                <h3>HRMS</h3>
+                <span class="project-showcase__year">Open source</span>
+              </div>
+              <p class="project-showcase__desc">
+                Full-stack human resource management system—employee records, workflows, and database-driven operations.
+              </p>
+              <div class="project-showcase__tech" aria-label="Technologies">
+                <span>Full Stack</span><span>Web App</span><span>Database</span>
+              </div>
+              <div class="project-showcase__actions">
+                <a href="https://github.com/bejjankisreekar/HRMS" class="project-btn project-btn--ghost" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://github.com/bejjankisreekar/HRMS" class="project-btn project-btn--primary" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-external-link-alt"></i> Live repo
+                </a>
+              </div>
+            </div>
+          </article>
 
-        <article class="project-card ui-card ui-card--rect" data-project-card>
-          <h3>Forex Algorithmic Trading</h3>
-          <ul>
-            <li>Algorithmic trading exploration with data-driven strategy components.</li>
-          </ul>
-          <div class="project-tech">
-            <span>Python</span><span>Algorithms</span><span>Finance</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/bejjankisreekar/Forex_algo_trading" class="btn primary-btn" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i> View on GitHub
-            </a>
-          </div>
-        </article>
+          <article
+            class="project-showcase"
+            data-project-card
+            data-category="open-source"
+            style="--project-delay: 240ms"
+          >
+            <div class="project-showcase__visual project-showcase__visual--crypto">
+              <div class="project-showcase__visual-glow" aria-hidden="true"></div>
+              <div class="project-showcase__visual-inner">
+                <i class="fab fa-bitcoin" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="project-showcase__body">
+              <div class="project-showcase__head">
+                <h3>Crypto Wallet</h3>
+                <span class="project-showcase__year">Open source</span>
+              </div>
+              <p class="project-showcase__desc">
+                Blockchain wallet application exploring distributed systems, key handling, and transaction flows.
+              </p>
+              <div class="project-showcase__tech" aria-label="Technologies">
+                <span>Blockchain</span><span>Application</span>
+              </div>
+              <div class="project-showcase__actions">
+                <a href="https://github.com/bejjankisreekar/crypto_wallet" class="project-btn project-btn--ghost" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://github.com/bejjankisreekar/crypto_wallet" class="project-btn project-btn--primary" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-external-link-alt"></i> Live repo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-showcase"
+            data-project-card
+            data-category="open-source"
+            style="--project-delay: 320ms"
+          >
+            <div class="project-showcase__visual project-showcase__visual--finance">
+              <div class="project-showcase__visual-glow" aria-hidden="true"></div>
+              <div class="project-showcase__visual-inner">
+                <i class="fas fa-chart-line" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="project-showcase__body">
+              <div class="project-showcase__head">
+                <h3>Forex Algorithmic Trading</h3>
+                <span class="project-showcase__year">Open source</span>
+              </div>
+              <p class="project-showcase__desc">
+                Data-driven algorithmic trading exploration with strategy components and market signal processing.
+              </p>
+              <div class="project-showcase__tech" aria-label="Technologies">
+                <span>Python</span><span>Algorithms</span><span>Finance</span>
+              </div>
+              <div class="project-showcase__actions">
+                <a href="https://github.com/bejjankisreekar/Forex_algo_trading" class="project-btn project-btn--ghost" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://github.com/bejjankisreekar/Forex_algo_trading" class="project-btn project-btn--primary" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-external-link-alt"></i> Live repo
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-empty" data-projects-empty hidden>
+          <div class="projects-empty__icon" aria-hidden="true"><i class="fas fa-folder-open"></i></div>
+          <h3>No projects in this category</h3>
+          <p>Try another filter or view all projects.</p>
+          <button type="button" class="btn primary-btn" data-filter-reset>View all projects</button>
+        </div>
       </div>
     </section>
   </main>
@@ -140,6 +272,8 @@
       </div>
     </div>
   </footer>
+  <script src="portfolio.js"></script>
   <script src="script.js"></script>
+  <script src="projects-page.js"></script>
 </body>
 </html>
