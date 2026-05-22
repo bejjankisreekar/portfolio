@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-work">
   <nav class="main-nav" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="logo"><span>SB</span> Sreekar Bejjanki</a>
@@ -31,36 +31,141 @@
   <main class="main-content">
     <div class="page-hero">
       <h1>Work Experience</h1>
-      <p>Professional roles building data systems and financial analytics.</p>
+      <p>Click a role to expand projects, tech stack, and full responsibilities.</p>
     </div>
 
     <section class="section">
-      <div class="container">
-        <article class="experience-item">
-          <h3>Data Engineer</h3>
-          <p class="role">Datalysys Software Solutions Pvt Ltd. · Hyderabad</p>
-          <span class="duration">June 2022 — Present</span>
-          <ul>
-            <li>Developed 5+ Databricks notebooks to automate SMS messaging workflows for healthcare.</li>
-            <li>Used PySpark to ingest and transform patient data for eligibility and scheduling.</li>
-            <li>Integrated Twilio API for real-time notifications and delivery tracking.</li>
-            <li>Secured credentials via Azure Key Vault and Unity Catalog.</li>
-            <li>Executed SQL Server stored procedures for configuration and logging.</li>
-          </ul>
-          <div class="project-links" style="margin-top: 20px;">
-            <a href="projects.html" class="btn primary-btn"><i class="fas fa-folder-open"></i> View Related Projects</a>
+      <div class="container work-accordion">
+
+        <article class="work-card" data-work-card>
+          <button type="button" class="work-card__trigger" aria-expanded="false" aria-controls="work-panel-1" id="work-trigger-1">
+            <div class="work-card__head">
+              <span class="work-badge work-badge--active">Current</span>
+              <div class="work-card__titles">
+                <h3>Data Engineer</h3>
+                <p class="work-company">Datalysys Software Solutions Pvt Ltd. · Hyderabad</p>
+                <span class="work-duration"><i class="far fa-calendar-alt"></i> June 2022 — Present</span>
+              </div>
+            </div>
+            <span class="work-card__cta">
+              <span class="work-cta-label">View details</span>
+              <span class="work-cta-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+            </span>
+          </button>
+
+          <div class="work-card__panel" id="work-panel-1" role="region" aria-labelledby="work-trigger-1" hidden>
+            <div class="work-panel-inner">
+              <div class="work-detail-block">
+                <h4><i class="fas fa-list-check"></i> Key responsibilities</h4>
+                <ul class="work-list">
+                  <li>Developed 5+ Databricks notebooks to automate SMS messaging workflows for healthcare use cases.</li>
+                  <li>Used PySpark to ingest and transform patient data for message eligibility and scheduling.</li>
+                  <li>Integrated Twilio API for real-time SMS notifications and delivery status tracking.</li>
+                  <li>Secured credential access using Azure Key Vault and Unity Catalog secrets management.</li>
+                  <li>Executed SQL Server stored procedures for dynamic configuration and activity logging.</li>
+                  <li>Built FHIR ingestion pipelines with Delta MERGE, CDC, and 1M+ record batch processing.</li>
+                </ul>
+              </div>
+
+              <div class="work-detail-block">
+                <h4><i class="fas fa-folder-open"></i> Projects at this role</h4>
+                <div class="work-projects">
+                  <a href="projects.html" class="work-project-chip">
+                    <strong>Patient Messaging Automation</strong>
+                    <span>SMS workflows · Twilio · Databricks</span>
+                  </a>
+                  <a href="projects.html" class="work-project-chip">
+                    <strong>FHIR Patient 360 Data Lake</strong>
+                    <span>HL7 FHIR · Delta Lake · Unity Catalog</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="work-detail-block">
+                <h4><i class="fas fa-layer-group"></i> Tech stack</h4>
+                <div class="work-tech">
+                  <span>Python</span><span>PySpark</span><span>Databricks</span><span>Delta Lake</span>
+                  <span>Azure</span><span>ADLS Gen2</span><span>Key Vault</span><span>Unity Catalog</span>
+                  <span>SQL Server</span><span>Twilio API</span><span>FHIR</span><span>HL7 JSON</span>
+                </div>
+              </div>
+
+              <div class="work-detail-block work-detail-block--highlight">
+                <h4><i class="fas fa-chart-simple"></i> Impact</h4>
+                <p>Delivered production-grade healthcare data pipelines with secure secrets handling, governed lakehouse tables, and automated patient communication at scale.</p>
+              </div>
+
+              <div class="work-panel-actions">
+                <a href="projects.html" class="btn primary-btn"><i class="fas fa-folder-open"></i> All Projects</a>
+                <a href="https://github.com/bejjankisreekar/ClientConnect" class="btn secondary-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> ClientConnect Repo</a>
+              </div>
+            </div>
           </div>
         </article>
 
-        <article class="experience-item">
-          <h3>Research Analyst</h3>
-          <p class="role">FactSet Systems · Hyderabad</p>
-          <span class="duration">November 2019 — May 2022</span>
-          <ul>
-            <li>Gathered, interpreted, and analyzed financial data from corporate reports and market sources.</li>
-            <li>Identified trends and insights that improved investment prediction accuracy by 85%.</li>
-          </ul>
+        <article class="work-card" data-work-card>
+          <button type="button" class="work-card__trigger" aria-expanded="false" aria-controls="work-panel-2" id="work-trigger-2">
+            <div class="work-card__head">
+              <span class="work-badge">Past</span>
+              <div class="work-card__titles">
+                <h3>Research Analyst</h3>
+                <p class="work-company">FactSet Systems · Hyderabad</p>
+                <span class="work-duration"><i class="far fa-calendar-alt"></i> November 2019 — May 2022</span>
+              </div>
+            </div>
+            <span class="work-card__cta">
+              <span class="work-cta-label">View details</span>
+              <span class="work-cta-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+            </span>
+          </button>
+
+          <div class="work-card__panel" id="work-panel-2" role="region" aria-labelledby="work-trigger-2" hidden>
+            <div class="work-panel-inner">
+              <div class="work-detail-block">
+                <h4><i class="fas fa-list-check"></i> Key responsibilities</h4>
+                <ul class="work-list">
+                  <li>Gathered, interpreted, and analyzed financial data from corporate reports and market sources.</li>
+                  <li>Built analytical models and reports to support investment research workflows.</li>
+                  <li>Identified market trends and patterns across equities and macro datasets.</li>
+                  <li>Collaborated with research teams to validate data quality and reporting accuracy.</li>
+                </ul>
+              </div>
+
+              <div class="work-detail-block">
+                <h4><i class="fas fa-briefcase"></i> Focus areas</h4>
+                <div class="work-projects">
+                  <div class="work-project-chip work-project-chip--static">
+                    <strong>Investment research analytics</strong>
+                    <span>Corporate filings · Market data · Trend analysis</span>
+                  </div>
+                  <div class="work-project-chip work-project-chip--static">
+                    <strong>Prediction & forecasting support</strong>
+                    <span>Model inputs · Accuracy validation · Reporting</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-detail-block">
+                <h4><i class="fas fa-layer-group"></i> Tech & tools</h4>
+                <div class="work-tech">
+                  <span>Financial Data APIs</span><span>Excel / Spreadsheets</span><span>SQL</span>
+                  <span>Data Validation</span><span>Statistical Analysis</span><span>Reporting</span>
+                </div>
+              </div>
+
+              <div class="work-detail-block work-detail-block--highlight">
+                <h4><i class="fas fa-chart-simple"></i> Impact</h4>
+                <p>Contributed to research insights that improved investment prediction accuracy by <strong>85%</strong> through rigorous data interpretation and trend identification.</p>
+              </div>
+
+              <div class="work-panel-actions">
+                <a href="skills.html" class="btn primary-btn"><i class="fas fa-award"></i> Skills & Certifications</a>
+                <a href="contact.html" class="btn secondary-btn"><i class="fas fa-envelope"></i> Contact Me</a>
+              </div>
+            </div>
+          </div>
         </article>
+
       </div>
     </section>
   </main>
