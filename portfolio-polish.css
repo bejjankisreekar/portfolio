@@ -116,22 +116,6 @@ html.is-ready body {
   border-bottom-color: color-mix(in srgb, var(--accent) 15%, var(--border));
 }
 
-.main-nav ul a {
-  position: relative;
-}
-
-.main-nav ul a.active::after {
-  content: "";
-  position: absolute;
-  bottom: 4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-
 /* Buttons — premium lift */
 .btn {
   position: relative;
