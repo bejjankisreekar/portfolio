@@ -2870,7 +2870,7 @@ h1, h2, h3, h4 {
 
 .certs-showcase-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-bottom: 32px;
 }
@@ -3019,6 +3019,12 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
+@media (max-width: 1024px) {
+  .certs-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .certs-showcase-grid {
     grid-template-columns: 1fr;
@@ -3059,6 +3065,7 @@ h1, h2, h3, h4 {
 .icon-github { background: rgba(148, 163, 184, 0.15); color: var(--heading); }
 .icon-leetcode { background: rgba(255, 161, 22, 0.15); color: #ffa116; }
 .icon-hackerrank { background: rgba(45, 212, 191, 0.12); color: #2dd4bf; }
+.icon-udemy { background: rgba(164, 53, 240, 0.18); color: #c084fc; }
 .icon-resume { background: rgba(248, 113, 113, 0.15); color: #f87171; }
 
 [data-leetcode-stats].leetcode-stats--loading {
